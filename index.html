@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html><title>BHS Schedule</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <head>
 <link href='https://fonts.googleapis.com/css?family=IM Fell English' rel='stylesheet'>
 <link rel="icon" href="https://theharmonicrealm.github.io/Images/SpartanLogo.jpg">
@@ -8,7 +9,7 @@
     var d = new Date();
     var today = d.getDay();
     var destination = "https://TheHarmonicRealm.github.io/index.html"+"#"+d.getDay();
-    document.write(destination);
+    //document.write(destination);
     document.location.replace(destination);
     if(today = 1){
         
@@ -52,6 +53,8 @@
 </head>       
 <body>
 
+    <a href="https://TheHarmonicRealm.github.io/AdvisorySchedule.html">Advisory Schedule</a> <br>
+    
     <a href="https://TheHarmonicRealm.github.io/LateStartSchedule.html">Late Start Schedule</a> <br>
 
     <a href="https://TheHarmonicRealm.github.io/EarlyReleaseSchedule.html">Early Release Schedule</a> <br>
