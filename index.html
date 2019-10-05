@@ -5,7 +5,7 @@
 <link href='https://fonts.googleapis.com/css?family=IM Fell English' rel='stylesheet'>
 <link rel="icon" href="https://theharmonicrealm.github.io/Images/SpartansLogo.jpg">
 
-<script>
+<!-- Comment out when testing --> <script>
     var d = new Date();
     var today = d.getDay();
     var destination = "https://theharmonicrealm.github.io/index.html"+"#"+d.getDay();
@@ -39,11 +39,38 @@
        font-family: monospace;
        
        }
+
+       h1 {
+           color: rgb(80, 80, 80);
+       }
        
        #title {
        font-weight: normal;
        
        }
+
+       @media (prefers-color-scheme: dark) {
+            body {
+                color: rgb(255, 255, 255);
+                background-color: rgb(0, 0, 0);
+                }
+            h1 {
+                color: rgb(175, 175, 175);
+            }
+            a:link {
+            color: rgb(105, 255, 0);
+            }
+            a:visited {
+            color: rgb(105, 255, 0);
+            }
+            a:hover {
+            color: rgb(0, 155, 255);
+            }
+            a:active {
+            color: rgb(139, 232, 255);
+            }
+       }
+            
     
     
 </style>
