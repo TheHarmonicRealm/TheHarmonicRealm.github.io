@@ -1,28 +1,7 @@
-var hasRedirected = false;
-var currentPage = window.location.toString();
-
 function goToCurrentDay() {
     var d = new Date();
     var today = d.getDay();
-    var destination = currentPage;
-    /*if (currentPage.slice(-1) == today){
-        destination = currentPage.replace(currentPage.slice(-1),'');;
-    }*/
-
-    if(!currentPage.includes('#'+today)) {
-        destination = currentPage+'#'+today;
-        return destination;
+    var currentPage = window.location;
+    var destination = currentPage+"#"+today;
+    document.location.replace(destination);
     }
-    //document.location.replace("https://google.com");
-    window.replace("https://google.com");
-}
-
-
-goToCurrentDay();
-/*
-function getRedirected(url) {
-    if (url.includes("#" + today)) {
-        function goToCurrentDay();
-    }
-}
-*/
