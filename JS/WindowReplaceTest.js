@@ -19,10 +19,3 @@ function goToCurrentDay() {
 
 
 goToCurrentDay();
-/*
-function getRedirected(url) {
-    if (url.includes("#" + today)) {
-        function goToCurrentDay();
-    }
-}
-*/
