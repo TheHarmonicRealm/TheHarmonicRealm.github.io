@@ -20,3 +20,5 @@ function goToCurrentDay() {
 
 
 goToCurrentDay();*/
+
+window.replace("https://google.com");
