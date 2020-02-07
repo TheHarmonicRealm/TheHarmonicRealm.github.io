@@ -1,4 +1,3 @@
-/*
 var hasRedirected = false;
 var currentPage = window.location.toString();
 
@@ -12,13 +11,7 @@ function goToCurrentDay() {
 
     if(!currentPage.includes('#'+today)) {
         destination = currentPage+'#'+today;
-        return destination;
+        console.log(destination);
+        document.location.replace(destination);
     }
-    //document.location.replace("https://google.com");
-    window.replace("https://google.com");
 }
-
-
-goToCurrentDay();*/
-
-window.replace("https://google.com");
