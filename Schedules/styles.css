@@ -1,0 +1,54 @@
+/* unvisited link */
+       a:link {
+       color: rgb(150, 0, 255);
+       }
+
+       /* visited link */
+       a:visited {
+       color: rgb(150, 0, 255);
+       }
+
+       /* mouse over link */
+       a:hover {
+       color: rgb(255, 100, 0);
+       }
+
+       /* selected link */
+       a:active {
+       color: rgb(100, 0, 255);
+       }
+    
+       body {
+       font-family: monospace;
+       
+       }
+
+       h1 {
+           color: rgb(80, 80, 80);
+       }
+       
+       #title {
+       font-weight: normal;
+       }
+
+       @media (prefers-color-scheme: dark) {
+            body {
+                color: rgb(255, 255, 255);
+                background-color: rgb(0, 0, 0);
+                }
+            h1 {
+                color: rgb(175, 175, 175);
+            }
+            a:link {
+            color: rgb(105, 255, 0);
+            }
+            a:visited {
+            color: rgb(105, 255, 0);
+            }
+            a:hover {
+            color: rgb(0, 155, 255);
+            }
+            a:active {
+            color: rgb(139, 232, 255);
+            }
+       }
