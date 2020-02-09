@@ -5,10 +5,12 @@ function goToCurrentDay() {
     var today = d.getDay();
     var destination = currentPage;
 
-    if(!currentPage.includes('#'+today)) {
-        destination = currentPage+'#'+today;
-        console.log(destination);
-        document.location.replace(destination);
+    if(today !== 0 && today !== 6) {
+        if(!currentPage.includes('#'+today)) {
+            destination = currentPage+'#'+today;
+            console.log(destination);
+            document.location.replace(destination);
+        }
     }
 }
 
