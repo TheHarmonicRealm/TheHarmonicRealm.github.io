@@ -12,6 +12,7 @@
         --background-color: rgb(142, 255, 246);
         --body-color: rgb(0, 0, 0);
         --title-background: rgb(0, 255, 128);
+        --links-background: rgb(0, 155, 255);
     }
 
     @media (prefers-color-scheme: dark) {
@@ -23,6 +24,7 @@
             --background-color: rgb(0, 0, 0);
             --body-color: rgb(255, 123, 0);
             --title-background: rgb(0, 0, 0);
+            --links-background: rgb(255, 100, 0);
         }
     }
 
@@ -106,7 +108,7 @@
     } */
 
     #links {
-        background-color: rgb(0, 155, 255);
+        background-color: var(--links-background);
         display: flex;
         justify-content: space-around;
         padding: 2px 2px 2px 2px;
