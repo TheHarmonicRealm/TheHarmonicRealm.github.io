@@ -1,54 +1,114 @@
-/* unvisited link */
-       a:link {
-       color: rgb(150, 0, 255);
-       }
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
 
-       /* visited link */
-       a:visited {
-       color: rgb(150, 0, 255);
-       }
+    :root {
+        --inactive: rgb(150, 0, 255);
+        --hover: rgb(255, 100, 0);
+        --active: rgb(100, 0, 255);
+        --h1-color: rgb(80, 80, 80);
+        --background-color: rgb(142, 255, 246);
+        --body-color: rgb(0, 0, 0);
+    }
 
-       /* mouse over link */
-       a:hover {
-       color: rgb(255, 100, 0);
-       }
+    @media (prefers-color-scheme: dark) {
+        :root {
+            --inactive: rgb(105, 255, 0);
+            --hover: rgb(0, 110, 255);
+            --active: rgb(139, 232, 255);
+            --h1-color: rgb(175, 175, 175);
+            --background-color: rgb(113, 0, 9);
+            --body-color: rgb(255, 255, 255);
+        }
+    }
 
-       /* selected link */
-       a:active {
-       color: rgb(100, 0, 255);
-       }
-    
-       body {
-       font-family: monospace;
-       
-       }
+    /* unvisited link */
 
-       h1 {
-           color: rgb(80, 80, 80);
-       }
-       
-       #title {
-       font-weight: normal;
-       }
+    a:link {
+        color: var(--inactive);
+    }
 
-       @media (prefers-color-scheme: dark) {
-            body {
-                color: rgb(255, 255, 255);
-                background-color: rgb(0, 0, 0);
-                }
-            h1 {
-                color: rgb(175, 175, 175);
+    /* visited link */
+
+    a:visited {
+        color: var(--inactive);
+    }
+
+    /* mouse over link */
+
+    a:hover {
+        color: var(--hover);
+    }
+
+    /* selected link */
+
+    a:active {
+        color: var(--active);
+    }
+
+    body {
+        font-family: monospace;
+        color: var(--body-color);
+    }
+
+    #content {
+        padding-left: 0px;
+        margin-left: 10px;
+    }
+
+    #background {
+        background-color: var(--background-color);
+    }
+
+    h1 {
+        color: var(--h1-color);
+        display: block;
+        font-size: 2em;
+        margin-top: 0.67em;
+        margin-bottom: 0.67em;
+        /* margin-left: 0;
+        margin-right: 0;
+        font-weight: bold;
+        padding-left: 0px; */
+    }
+
+    .title {
+        font-weight: normal;
+        background-color: rgb(0, 255, 128);
+        margin-left: -10px;
+        padding-left: 10px;
+    }
+
+    /* @media (prefers-color-scheme: dark) {
+        body {
+            color: rgb(255, 255, 255);
+            background-color: rgb(0, 0, 0);
             }
-            a:link {
-            color: rgb(105, 255, 0);
-            }
-            a:visited {
-            color: rgb(105, 255, 0);
-            }
-            a:hover {
-            color: rgb(0, 155, 255);
-            }
-            a:active {
-            color: rgb(139, 232, 255);
-            }
-       }
+        h1 {
+            color: rgb(175, 175, 175);
+        }
+        a:link {
+        color: rgb(105, 255, 0);
+        }
+        a:visited {
+        color: rgb(105, 255, 0);
+        }
+        a:hover {
+        color: rgb(0, 110, 255);
+        }
+        a:active {
+        color: rgb(139, 232, 255);
+        }
+    } */
+
+    #links {
+        background-color: rgb(0, 155, 255);
+        display: flex;
+        justify-content: space-around;
+        padding: 2px 2px 2px 2px;
+        margin: 0px 0px 0px 0px;
+        border: 0px;
+        box-sizing: border-box;
+    }
