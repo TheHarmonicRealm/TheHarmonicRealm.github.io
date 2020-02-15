@@ -8,9 +8,10 @@
         --inactive: rgb(150, 0, 255);
         --hover: rgb(255, 100, 0);
         --active: rgb(100, 0, 255);
-        --h1-color: rgb(80, 80, 80);
+        --h1-color: rgb(94, 94, 94);
         --background-color: rgb(142, 255, 246);
         --body-color: rgb(0, 0, 0);
+        --title-background: rgb(0, 255, 128);
     }
 
     @media (prefers-color-scheme: dark) {
@@ -18,9 +19,10 @@
             --inactive: rgb(105, 255, 0);
             --hover: rgb(0, 110, 255);
             --active: rgb(139, 232, 255);
-            --h1-color: rgb(175, 175, 175);
-            --background-color: rgb(113, 0, 9);
+            --h1-color: rgb(80, 80, 80);
+            --background-color: rgb(255, 123, 0);
             --body-color: rgb(255, 255, 255);
+            --title-background: rgb(255, 140, 32);
         }
     }
 
@@ -76,7 +78,7 @@
 
     .title {
         font-weight: normal;
-        background-color: rgb(0, 255, 128);
+        background-color: var(--title-background);
         margin-left: -10px;
         padding-left: 10px;
     }
