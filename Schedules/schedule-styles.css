@@ -28,10 +28,10 @@
             --active: rgb(139, 232, 255);
             --background-color: rgb(255, 121, 32);
             --body-color: rgb(255, 255, 255);/*rgb(255, 140, 32); */
-            --links-background: rgb(0, 0, 0);
+            --links-background: rgb(255, 119, 29);
 
             --h1-color: rgb(207, 83, 0);
-            --title-background: rgb(255, 156, 89);
+            --title-background: rgb(255, 140, 64);
             --underline-color: rgb(0, 155, 255);
 
             --gradient-top: rgb(202, 81, 0);
