@@ -4,10 +4,6 @@
         box-sizing: border-box;
     }
 
-    body {
-        
-    }
-
     :root {
         --inactive: rgb(150, 0, 255);
         --hover: rgb(255, 100, 0);
@@ -21,7 +17,7 @@
         --underline-color: #ff6400;
 
         --gradient-top: rgb(50, 214, 255);
-        --gradient-bottom: rgb(103, 223, 253);
+        --gradient-bottom: rgb(163, 237, 255);
         --gradient-background: linear-gradient(var(--gradient-top), var(--gradient-bottom));
     }
 
@@ -32,14 +28,14 @@
             --active: rgb(139, 232, 255);
             --background-color: rgb(255, 121, 32);
             --body-color: rgb(255, 255, 255);/*rgb(255, 140, 32); */
-            --links-background: rgb(0, 155, 255);
+            --links-background: rgb(0, 0, 0);
 
-            --h1-color: rgb(255, 100, 0);
-            --title-background: rgb(255, 197, 158);
+            --h1-color: rgb(207, 83, 0);
+            --title-background: rgb(255, 156, 89);
             --underline-color: rgb(0, 155, 255);
 
-            --gradient-top: rgb(255, 121, 32);
-            --gradient-bottom: rgb(153, 61, 0);
+            --gradient-top: rgb(202, 81, 0);
+            --gradient-bottom: rgb(255, 121, 32);
             --gradient-background: linear-gradient(var(--gradient-top), var(--gradient-bottom));
         }
     }
