@@ -8,11 +8,13 @@
         --inactive: rgb(150, 0, 255);
         --hover: rgb(255, 100, 0);
         --active: rgb(100, 0, 255);
-        --h1-color: rgb(0, 194, 243);
         --background-color: rgb(103, 223, 253);
         --body-color: rgb(0, 0, 0);
-        --title-background: rgb(163, 237, 255);
         --links-background: rgb(163, 237, 255);
+
+        --h1-color: rgb(0, 194, 243);
+        --title-background: rgb(163, 237, 255);
+        --underline-color: rgb(255, 100, 0);
     }
 
     @media (prefers-color-scheme: dark) {
@@ -20,11 +22,13 @@
             --inactive: rgb(105, 255, 0);
             --hover: rgb(0, 110, 255);
             --active: rgb(139, 232, 255);
-            --h1-color: rgb(0, 255, 179);
-            --background-color: rgb(4, 0, 61);
-            --body-color: rgb(255, 140, 32);
-            --title-background: rgb(5, 0, 82);
+            --background-color: rgb(255, 121, 32);
+            --body-color: rgb(255, 255, 255);/*rgb(255, 140, 32); */
             --links-background: rgb(0, 155, 255);
+
+            --h1-color: rgb(255, 100, 0);
+            --title-background: rgb(255, 197, 158);
+            --underline-color: rgb(0, 155, 255);
         }
     }
 
@@ -84,7 +88,7 @@
         background-color: var(--title-background);
         margin-left: -10px;
         padding-left: 10px;
-        text-decoration: underline overline rgb(255, 100, 0) 3px;
+        text-decoration: underline overline var(--underline-color) 3px;
     }
 
     #links {
