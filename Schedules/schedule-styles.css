@@ -4,6 +4,10 @@
         box-sizing: border-box;
     }
 
+    body {
+        
+    }
+
     :root {
         --inactive: rgb(150, 0, 255);
         --hover: rgb(255, 100, 0);
@@ -14,7 +18,11 @@
 
         --h1-color: rgb(0, 194, 243);
         --title-background: rgb(163, 237, 255);
-        --underline-color: rgb(255, 100, 0);
+        --underline-color: #ff6400;
+
+        --gradient-top: rgb(50, 214, 255);
+        --gradient-bottom: rgb(103, 223, 253);
+        --gradient-background: linear-gradient(var(--gradient-top), var(--gradient-bottom));
     }
 
     @media (prefers-color-scheme: dark) {
@@ -29,6 +37,10 @@
             --h1-color: rgb(255, 100, 0);
             --title-background: rgb(255, 197, 158);
             --underline-color: rgb(0, 155, 255);
+
+            --gradient-top: rgb(255, 121, 32);
+            --gradient-bottom: rgb(153, 61, 0);
+            --gradient-background: linear-gradient(var(--gradient-top), var(--gradient-bottom));
         }
     }
 
@@ -67,7 +79,9 @@
     }
 
     #background {
-        background-color: var(--background-color);
+        /* background-color: var(--background-color); */
+        background-image: var(--gradient-background);
+        padding-bottom: 10px;
     }
 
     h1 {
