@@ -12,7 +12,7 @@
         --background-color: rgb(103, 223, 253);
         --body-color: rgb(0, 0, 0);
         --title-background: rgb(163, 237, 255);
-        --links-background: rgb(255, 100, 0);
+        --links-background: rgb(163, 237, 255);
     }
 
     @media (prefers-color-scheme: dark) {
@@ -76,6 +76,7 @@
         margin-right: 0;
         font-weight: bold;
         padding-left: 0px; */
+        text-decoration: dashed;
     }
 
     .title {
@@ -83,12 +84,13 @@
         background-color: var(--title-background);
         margin-left: -10px;
         padding-left: 10px;
+        text-decoration: underline overline rgb(255, 100, 0) 3px;
     }
 
     #links {
         background-color: var(--links-background);
         display: flex;
-        justify-content: space-around;
+        justify-content: space-evenly;
         padding: 2px 2px 2px 2px;
         margin: 0px 0px 0px 0px;
         border: 0px;
