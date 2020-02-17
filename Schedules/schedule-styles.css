@@ -23,9 +23,9 @@
 
     @media (prefers-color-scheme: dark) {
         :root {
-            --inactive: rgb(163, 237, 255);
-            --hover: rgb(125, 203, 255);
-            --active: rgb(46, 172, 255);
+            --inactive: rgb(187, 241, 255);
+            --hover: rgb(161, 217, 255);
+            --active: rgb(126, 203, 255);
             --background-color: rgb(255, 121, 32);
             --body-color: rgb(255, 255, 255);/*rgb(255, 140, 32); */
             --links-background: rgb(255, 119, 29);
