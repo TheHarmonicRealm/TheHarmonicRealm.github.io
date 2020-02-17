@@ -113,7 +113,7 @@
         background-color: var(--title-background);
         margin-left: -10px;
         padding-left: 10px;
-        text-decoration-line: underline;
+        text-decoration-line: underline overline;
         text-decoration-color: var(--underline-color);
         text-decoration-style: solid;
         text-decoration-thickness: 3px;
