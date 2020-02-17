@@ -5,9 +5,9 @@
     }
 
     :root {
-        --inactive: rgb(0, 174, 218);
-        --hover: rgb(0, 156, 196);
-        --active: rgb(0, 135, 168);
+        --inactive: rgb(255, 102, 0);
+        --hover: rgb(219, 88, 0);
+        --active: rgb(212, 85, 0);
         --background-color: rgb(103, 223, 253);
         --body-color: rgb(0, 0, 0);
         --links-background: rgb(163, 237, 255);
@@ -23,9 +23,9 @@
 
     @media (prefers-color-scheme: dark) {
         :root {
-            --inactive: rgb(187, 75, 0);
-            --hover: rgb(167, 67, 0);
-            --active: rgb(148, 59, 0);
+            --inactive: rgb(163, 237, 255);
+            --hover: rgb(125, 203, 255);
+            --active: rgb(46, 172, 255);
             --background-color: rgb(255, 121, 32);
             --body-color: rgb(255, 255, 255);/*rgb(255, 140, 32); */
             --links-background: rgb(255, 119, 29);
