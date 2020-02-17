@@ -5,20 +5,20 @@
     }
 
     :root {
-        --inactive: rgb(0, 204, 255);
-        --hover: rgb(0, 174, 218);
-        --active: rgb(0, 148, 185);
+        --inactive: rgb(0, 174, 218);
+        --hover: rgb(0, 156, 196);
+        --active: rgb(0, 135, 168);
         --background-color: rgb(103, 223, 253);
         --body-color: rgb(0, 0, 0);
         --links-background: rgb(163, 237, 255);
 
         --title-color: rgb(0, 194, 243);
         --title-background: rgb(163, 237, 255);
-        --underline-color: #ff6400;
+        --underline-color: rgb(255, 102, 0);
 
         --gradient-top: rgb(50, 214, 255);
         --gradient-bottom: rgb(163, 237, 255);
-        --gradient-background: linear-gradient(var(--gradient-top), var(--gradient-bottom));
+        --gradient-background: linear-gradient(to right, var(--gradient-top), var(--gradient-bottom));
     }
 
     @media (prefers-color-scheme: dark) {
@@ -35,8 +35,8 @@
             --underline-color: rgb(0, 155, 255);
 
             --gradient-top: rgb(202, 81, 0);
-            --gradient-bottom: rgb(255, 121, 32);
-            --gradient-background: linear-gradient(var(--gradient-top), var(--gradient-bottom));
+            --gradient-bottom: rgb(255, 140, 64);
+            --gradient-background: linear-gradient(to right, var(--gradient-top), var(--gradient-bottom));
         }
     }
 
