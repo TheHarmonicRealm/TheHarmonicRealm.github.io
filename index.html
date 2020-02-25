@@ -5,13 +5,17 @@
 <link href='https://fonts.googleapis.com/css?family=IM Fell English' rel='stylesheet'>
 <link rel="icon" href="Images/Logo.svg">
 <link rel="stylesheet" href="styles.css"/>
+<script src="JS/LoadScheduleLinks.js"></script>
 </head>
-<body>
-<h1>Welcome to my website!</h1>
-<p>
-See <a href="Schedules/RegularSchedule.html">the schedules</a>.
-
-<em>there would be more content here, if I had any.</em>
-</p>
+<body onload="loadLinks()">
+    <div id = "background">
+        <div id = "links"></div>
+        <div id = "content">
+            <h1 class = "title">Welcome to my website!</h1>
+            <p>
+                All that is here are some schedules. See the links at the top to get to them.
+            </p>
+        </div>
+    </div>
 </body>
 </html>
