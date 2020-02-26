@@ -27,50 +27,14 @@ function variableThemeSwitch(variable, mode) {
 
 function setColors() {
     if (darkModeEnabled) {
-        //set it to be dark
-        variableThemeSwitch("inactive", "dark");
-        variableThemeSwitch("hover", "dark");
-        variableThemeSwitch("active", "dark");
-        variableThemeSwitch("inactive-underline", "dark");
-        variableThemeSwitch("hover-underline", "dark");
-        variableThemeSwitch("active-underline", "dark");
-        variableThemeSwitch("link-underline-width", "dark");
-        variableThemeSwitch("background-color", "dark");
-        variableThemeSwitch("body-color", "dark");
-        variableThemeSwitch("links-background", "dark");
-        variableThemeSwitch("title-color", "dark");
-        variableThemeSwitch("title-background", "dark");
-        variableThemeSwitch("underline-color", "dark");
-        variableThemeSwitch("gradient-top", "dark");
-        variableThemeSwitch("gradient-bottom", "dark");
-        variableThemeSwitch("button-background", "dark");
-        variableThemeSwitch("button-text", "dark");
-        variableThemeSwitch("button-hover-text", "dark");
-        variableThemeSwitch("button-hover-background", "dark");
-        variableThemeSwitch("button-border", "dark");
+        for (remainingVars = cssVars.length + 1; remainingVars >= 0; remainingVars--) {
+            variableThemeSwitch(cssVars[remainingVars], "dark");
+        }
     }
     else if (!darkModeEnabled) {
-        //set it to be light
-        variableThemeSwitch("inactive", "light");
-        variableThemeSwitch("hover", "light");
-        variableThemeSwitch("active", "light");
-        variableThemeSwitch("inactive-underline", "light");
-        variableThemeSwitch("hover-underline", "light");
-        variableThemeSwitch("active-underline", "light");
-        variableThemeSwitch("link-underline-width", "light");
-        variableThemeSwitch("background-color", "light");
-        variableThemeSwitch("body-color", "light");
-        variableThemeSwitch("links-background", "light");
-        variableThemeSwitch("title-color", "light");
-        variableThemeSwitch("title-background", "light");
-        variableThemeSwitch("underline-color", "light");
-        variableThemeSwitch("gradient-top", "light");
-        variableThemeSwitch("gradient-bottom", "light");
-        variableThemeSwitch("button-background", "light");
-        variableThemeSwitch("button-text", "light");
-        variableThemeSwitch("button-hover-text", "light");
-        variableThemeSwitch("button-hover-background", "light");
-        variableThemeSwitch("button-border", "light");
+        for (remainingVars = cssVars.length + 1; remainingVars >= 0; remainingVars--) {
+            variableThemeSwitch(cssVars[remainingVars], "light");
+        }
     }
 
 }
