@@ -1,12 +1,17 @@
 var darkModeEnabled = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+var cssVars =
+    ["inactive", "hover", "active", "inactive-underline", "hover-underline", "active-underline",
+        "link-underline-width", "background-color", "body-color", "links-background", "title-color",
+        "title-background", "underline-color", "gradient-top", "gradient-bottom", "button-background",
+        "button-text", "button-hover-background", "button-hover-text"];
 
 function setButtonText() {
 
     if (darkModeEnabled) {
-        document.getElementById("darkModeSwitch").innerHTML = "Switch to light mode";
+        document.getElementById("darkModeButton").innerHTML = "Switch to light mode";
     }
     else {
-        document.getElementById("darkModeSwitch").innerHTML = "Switch to dark mode";
+        document.getElementById("darkModeButton").innerHTML = "Switch to dark mode";
     }
 
 }
@@ -38,6 +43,11 @@ function setColors() {
         variableThemeSwitch("underline-color", "dark");
         variableThemeSwitch("gradient-top", "dark");
         variableThemeSwitch("gradient-bottom", "dark");
+        variableThemeSwitch("button-background", "dark");
+        variableThemeSwitch("button-text", "dark");
+        variableThemeSwitch("button-hover-text", "dark");
+        variableThemeSwitch("button-hover-background", "dark");
+        variableThemeSwitch("button-border", "dark");
     }
     else if (!darkModeEnabled) {
         //set it to be light
@@ -56,14 +66,17 @@ function setColors() {
         variableThemeSwitch("underline-color", "light");
         variableThemeSwitch("gradient-top", "light");
         variableThemeSwitch("gradient-bottom", "light");
+        variableThemeSwitch("button-background", "light");
+        variableThemeSwitch("button-text", "light");
+        variableThemeSwitch("button-hover-text", "light");
+        variableThemeSwitch("button-hover-background", "light");
+        variableThemeSwitch("button-border", "light");
     }
 
 }
 
 function darkModeSwitch() {
     darkModeEnabled = !darkModeEnabled
-
     setColors();
-
     setButtonText();
 }
