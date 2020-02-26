@@ -1,4 +1,4 @@
 function loadLinks() {
     document.getElementById("links").innerHTML = 
-    "<a href=\"RegularSchedule.html\">Regular Schedule</a> <br> <a href=\"AdvisorySchedule.html\">Advisory Schedule</a> <br> <a href=\"FinalsSchedule.html\">Finals Schedule</a> <br>";
+    "<a href=\"/Schedules/RegularSchedule.html\">Regular Schedule</a> <br> <a href=\"/Schedules/AdvisorySchedule.html\">Advisory Schedule</a> <br> <a href=\"/Schedules/FinalsSchedule.html\">Finals Schedule</a> <br>";
 }
