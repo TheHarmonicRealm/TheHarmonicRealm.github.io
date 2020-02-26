@@ -9,9 +9,17 @@
 <!-- Comment out when testing -->
 <script src="../JS/CurrentSchedule.js"></script>
 <script src="../JS/LoadScheduleLinks.js"></script>
+<script src="../JS/DarkModeSwitching.js"></script>
+<script>
+    window.onload = function(){
+        setButtonText();
+        loadLinks();
+    }
+</script>
 </head>
-<body onload="loadLinks()">
+<body>
     <div id = "background">
+        <button onclick="darkModeSwitch()" id="darkModeSwitch" onclick="setButtonText()">adfjkfjdsalk</button>
         <div id = "links"></div>
         
         <div id = "content">
