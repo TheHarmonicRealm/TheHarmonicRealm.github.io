@@ -123,6 +123,7 @@
         /* background-color: var(--background-color); */
         background-image: var(--gradient-background);
         padding-bottom: 10px;
+
     }
 
     #darkModeButton {
@@ -139,6 +140,7 @@
         font-family: monospace;
         width: 258px;
         height: 50px;
+        border-radius: 8px;
     }
 
     #darkModeButton:hover {
