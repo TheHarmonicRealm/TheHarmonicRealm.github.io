@@ -50,7 +50,7 @@
         --light-button-text: rgb(0, 0, 0);
         --light-button-hover-background: rgb(0, 204, 255);
         --light-button-hover-text: rgb(0, 0, 0);
-        --light-button-border: rgb(255, 255, 255);
+        --light-button-border: rgb(255, 123, 35);
 
         /* dark mode; the other ones are set to be equal to these if dark mode is on */
         --dark-inactive: rgb(187, 241, 255);
@@ -71,7 +71,7 @@
         --dark-button-text: rgb(255, 255, 255);
         --dark-button-hover-background: rgb(255, 102, 0);
         --dark-button-hover-text: rgb(255, 255, 255);
-        --dark-button-border: rgb(0, 0, 0);
+        --dark-button-border: rgb(187, 241, 255);
     }
 
     a {
