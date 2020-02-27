@@ -39,8 +39,11 @@ function setColors() {
 
 }
 
-function darkModeSwitch() {
-    darkModeEnabled = !darkModeEnabled
+function setColorsAndButtonText() {
     setColors();
     setButtonText();
+}
+
+function darkModeSwitch() {
+    darkModeEnabled = !darkModeEnabled
 }
