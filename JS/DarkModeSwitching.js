@@ -3,7 +3,7 @@ var cssVars =
     ["inactive", "hover", "active", "inactive-underline", "hover-underline", "active-underline",
         "link-underline-width", "background-color", "body-color", "links-background", "title-color",
         "title-background", "underline-color", "gradient-top", "gradient-bottom", "button-background",
-        "button-text", "button-hover-background", "button-hover-text", "button-border"];
+        "button-text", "button-hover-background", "button-hover-text", "button-border", "selection-color"];
 
 function setButtonText() {
 
