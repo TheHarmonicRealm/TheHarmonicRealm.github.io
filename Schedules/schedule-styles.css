@@ -30,6 +30,7 @@
         --button-hover-text: rgb(0, 0, 0);
         --button-border: rgb(0, 0, 0);
         --top-border-color: rgb(255, 119, 29);
+        --selection-color: cyan;
 
         /* light mode; the other ones are set to be equal to these if light mode is on */
         --light-inactive: rgb(255, 123, 35);
@@ -52,7 +53,8 @@
         --light-button-hover-background: rgb(0, 204, 255);
         --light-button-hover-text: rgb(0, 0, 0);
         --light-button-border: rgb(255, 123, 35);
-        --top-border-color: rgb(255, 119, 29);
+        --light-top-border-color: rgb(255, 119, 29);
+        --light-selection-color: cyan;
 
         /* dark mode; the other ones are set to be equal to these if dark mode is on */
         --dark-inactive: rgb(187, 241, 255);
@@ -75,6 +77,7 @@
         --dark-button-hover-text: rgb(255, 255, 255);
         --dark-button-border: rgb(187, 241, 255);
         --dark-top-border-color: rgb(103, 223, 253);
+        --dark-selection-color: orange;
     }
 
     a {
