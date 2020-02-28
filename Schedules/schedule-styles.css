@@ -200,5 +200,5 @@
     }
 
     ::selection {
-        background-color: cyan;
+        background-color: var(--selection-color);
     }
