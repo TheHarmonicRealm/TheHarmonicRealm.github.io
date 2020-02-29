@@ -29,7 +29,8 @@
         --button-hover-background: rgb(0, 204, 255);
         --button-hover-text: rgb(0, 0, 0);
         --button-border: rgb(0, 0, 0);
-        --top-border: rgb(255, 119, 29);
+        --top-border-color: rgb(255, 119, 29);
+        --selection-color: cyan;
 
         /* light mode; the other ones are set to be equal to these if light mode is on */
         --light-inactive: rgb(255, 123, 35);
@@ -52,7 +53,8 @@
         --light-button-hover-background: rgb(0, 204, 255);
         --light-button-hover-text: rgb(0, 0, 0);
         --light-button-border: rgb(255, 123, 35);
-        --light-top-border: rgb(255, 119, 29);
+        --light-top-border-color: rgb(255, 119, 29);
+        --light-selection-color: cyan;
 
         /* dark mode; the other ones are set to be equal to these if dark mode is on */
         --dark-inactive: rgb(187, 241, 255);
@@ -74,7 +76,8 @@
         --dark-button-hover-background: rgb(255, 102, 0);
         --dark-button-hover-text: rgb(255, 255, 255);
         --dark-button-border: rgb(187, 241, 255);
-        --dark-top-border: rgb(103, 223, 253);
+        --dark-top-border-color: rgb(103, 223, 253);
+        --dark-selection-color: orange;
     }
 
     a {
@@ -115,7 +118,7 @@
         font-family: monospace;
         color: var(--body-color);
         font-size: 13px;
-        margin-top: 21.5px;
+        margin-top: 20px;
     }
 
     #content {
@@ -183,7 +186,7 @@
         position: fixed;
         width: 100%;
         top: 0;
-        border-bottom: 2px solid var(--top-border);
+        border-bottom: 2px solid var(--top-border-color);
         font-size: 10px;
     }
 
@@ -198,5 +201,5 @@
     }
 
     ::selection {
-        background-color: cyan;
+        background-color: var(--selection-color);
     }
