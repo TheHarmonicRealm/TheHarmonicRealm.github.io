@@ -18,9 +18,9 @@
     --title-color: rgb(0, 194, 243);
     --title-background: rgb(163, 237, 255);
     --underline-color: rgb(255, 102, 0);
-    --gradient-top: rgb(50, 214, 255);
-    --gradient-bottom: rgb(163, 237, 255);
-    --gradient-background: linear-gradient(to right, var(--gradient-top), var(--gradient-bottom));
+    --background-gradient-top: rgb(50, 214, 255);
+    --background-gradient-bottom: rgb(163, 237, 255);
+    --background-gradient-background: linear-gradient(to right, var(--background-gradient-top), var(--background-gradient-bottom));
 }
 
 @media (prefers-color-scheme: dark) {
@@ -38,9 +38,9 @@
         --title-color: rgb(202, 81, 0);
         --title-background: rgb(255, 140, 64);
         --underline-color: rgb(46, 132, 212);
-        --gradient-top: rgb(202, 81, 0);
-        --gradient-bottom: rgb(255, 140, 64);
-        --gradient-background: linear-gradient(to right, var(--gradient-top), var(--gradient-bottom));
+        --background-gradient-top: rgb(202, 81, 0);
+        --background-gradient-bottom: rgb(255, 140, 64);
+        --background-gradient-background: linear-gradient(to right, var(--background-gradient-top), var(--background-gradient-bottom));
     }
 }
 
@@ -90,7 +90,7 @@ body {
 
 #background {
     /* background-color: var(--background-color); */
-    background-image: var(--gradient-background);
+    background-image: var(--background-gradient-background);
     padding-bottom: 10px;
 }
 

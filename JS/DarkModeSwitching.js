@@ -2,9 +2,9 @@ var darkModeEnabled = window.matchMedia && window.matchMedia('(prefers-color-sch
 var cssVars =
     ["inactive", "hover", "active", "inactive-underline", "hover-underline", "active-underline",
         "link-underline-width", "background-color", "body-color", "links-background", "title-color",
-        "title-background", "underline-color", "gradient-top", "gradient-bottom", "button-background",
-        "button-text", "button-hover-background", "button-hover-text", "button-border", "top-border-color", 
-        "selection-color"];
+        "title-background", "underline-color", "background-gradient-left", "background-gradient-right", "button-background",
+        "button-text", "button-hover-background", "button-hover-text", "button-border", "links-border-color", 
+        "selection-color", "links-gradient-left", "links-gradient-middle", "links-gradient-right"];
 
 function setButtonText() {
 

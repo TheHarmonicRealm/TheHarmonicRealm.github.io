@@ -6,8 +6,9 @@
 
     :root {
         /* this is the same always, just the variables in it change */
-        --gradient-background: linear-gradient(to right, var(--gradient-top), var(--gradient-bottom));
-        
+        --background-gradient: linear-gradient(to right, var(--background-gradient-left), var(--background-gradient-right));
+        --links-gradient: linear-gradient(to right, var(--links-gradient-left), var(--links-gradient-middle), var(--links-gradient-right));
+
         /* light mode; shows if JS doesn't work */
         --inactive: rgb(255, 123, 35);
         --hover: rgb(255, 112, 17);
@@ -18,18 +19,21 @@
         --link-underline-width: 1px;
         --background-color: rgb(103, 223, 253);
         --body-color: rgb(0, 0, 0);
-        --links-background: rgb(163, 237, 255);
+        --links-border-color: rgb(255, 119, 29);
+        /* TODO: these */
+        --links-gradient-left: rgb(50, 214, 255);
+        --links-gradient-middle: rgb(50, 214, 255);
+        --links-gradient-right: rgb(163, 237, 255);
         --title-color: rgb(0, 194, 243);
         --title-background: rgb(163, 237, 255);
         --underline-color: rgb(255, 102, 0);
-        --gradient-top: rgb(50, 214, 255);
-        --gradient-bottom: rgb(163, 237, 255);
+        --background-gradient-left: rgb(50, 214, 255);
+        --background-gradient-right: rgb(163, 237, 255);
         --button-background: rgb(163, 237, 255);
         --button-text: rgb(0, 0, 0);
         --button-hover-background: rgb(0, 204, 255);
         --button-hover-text: rgb(0, 0, 0);
         --button-border: rgb(0, 0, 0);
-        --top-border-color: rgb(255, 119, 29);
         --selection-color: cyan;
 
         /* light mode; the other ones are set to be equal to these if light mode is on */
@@ -42,18 +46,21 @@
         --light-link-underline-width: 1px;
         --light-background-color: rgb(103, 223, 253);
         --light-body-color: rgb(0, 0, 0);
-        --light-links-background: rgb(163, 237, 255);
+        --light-links-border-color: rgb(255, 119, 29);
+        /* TODO: these */
+        --light-links-gradient-left: rgb(50, 214, 255);
+        --light-links-gradient-middle: rgb(50, 214, 255);
+        --light-links-gradient-right: rgb(163, 237, 255);
         --light-title-color: rgb(0, 194, 243);
         --light-title-background: rgb(163, 237, 255);
         --light-underline-color: rgb(255, 102, 0);
-        --light-gradient-top: rgb(50, 214, 255);
-        --light-gradient-bottom: rgb(163, 237, 255);
+        --light-background-gradient-left: rgb(50, 214, 255);
+        --light-background-gradient-right: rgb(163, 237, 255);
         --light-button-background: rgb(163, 237, 255);
         --light-button-text: rgb(0, 0, 0);
         --light-button-hover-background: rgb(0, 204, 255);
         --light-button-hover-text: rgb(0, 0, 0);
         --light-button-border: rgb(255, 123, 35);
-        --light-top-border-color: rgb(255, 119, 29);
         --light-selection-color: cyan;
 
         /* dark mode; the other ones are set to be equal to these if dark mode is on */
@@ -65,18 +72,21 @@
         --dark-active-underline: var(--dark-active);
         --dark-background-color: rgb(255, 121, 32);
         --dark-body-color: rgb(255, 255, 255);
-        --dark-links-background: rgb(255, 119, 29);
-        --dark-title-color: rgb(255, 163, 135);
+        --dark-links-border-color: rgb(219, 88, 0);
+        /* TODO: these */
+        --dark-links-gradient-left: rgb(219, 88, 0);
+        --dark-links-gradient-middle: rgb(0, 0, 0);
+        --dark-links-gradient-right: rgb(219, 88, 0);
+        --dark-title-color: rgb(255, 255, 255);
         --dark-title-background: rgb(219, 88, 0);
         --dark-underline-color: rgb(46, 132, 212);
-        --dark-gradient-top: rgb(150, 60, 0);
-        --dark-gradient-bottom: rgb(202, 81, 0);
+        --dark-background-gradient-left: rgb(173, 69, 0);
+        --dark-background-gradient-right: rgb(0, 0, 0);
         --dark-button-background: rgb(255, 102, 0);
         --dark-button-text: rgb(255, 255, 255);
         --dark-button-hover-background: rgb(219, 88, 0);
         --dark-button-hover-text: rgb(255, 255, 255);
         --dark-button-border: rgb(187, 241, 255);
-        --dark-top-border-color: rgb(103, 223, 253);
         --dark-selection-color: orange;
     }
 
@@ -128,7 +138,7 @@
 
     #background {
         /* background-color: var(--background-color); */
-        background-image: var(--gradient-background);
+        background-image: var(--background-gradient);
         padding-bottom: 10px;
 
     }
@@ -181,12 +191,12 @@
     }
 
     #links {
-        background-color: var(--links-background);
+        background-image: var(--links-gradient);
         box-sizing: border-box;
         position: fixed;
         width: 100%;
         top: 0;
-        border-bottom: 2px solid var(--top-border-color);
+        border-bottom: 2px solid var(--links-border-color);
         font-size: 10px;
     }
 
