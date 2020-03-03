@@ -4,7 +4,7 @@ var cssVars =
         "link-underline-width", "background-color", "body-color", "links-background", "title-color",
         "title-background", "underline-color", "background-gradient-left", "background-gradient-right", "button-background",
         "button-text", "button-hover-background", "button-hover-text", "button-border", "links-border-color", 
-        "selection-color", "links-gradient-left", "links-gradient-middle", "links-gradient-right"];
+        "selection-color", "links-gradient-left", "links-gradient-right"];
 
 function setButtonText() {
 
