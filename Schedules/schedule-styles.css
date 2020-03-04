@@ -142,6 +142,7 @@
     }
 
     body {
+        font-family: 'Open Sans', sans-serif;
         color: var(--body-color);
         font-size: 13px;
         margin-top: 20px;
