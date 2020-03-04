@@ -142,7 +142,7 @@
     }
 
     body {
-        font-family: monospace;
+        font-family: 'Open Sans', sans-serif;
         color: var(--body-color);
         font-size: 13px;
         margin-top: 20px;
@@ -151,6 +151,10 @@
     #content {
         padding-left: 0px;
         margin-left: 10px;
+    }
+
+    p {
+        font-weight: 400;
     }
 
     #background {
@@ -171,7 +175,7 @@
         font-size: 14px;
         margin-top: 10px;
         margin-left: 10px;
-        font-family: monospace;
+        font-family: 'Open Sans', sans-serif;
         width: 258px;
         height: 50px;
         border-radius: 8px;
@@ -193,11 +197,11 @@
         font-weight: bold;
         padding-left: 0px; */
         text-decoration: dashed;
+        font-weight: 300;
     }
 
     .title {
         color: var(--title-color);
-        font-weight: normal;
         background-color: var(--title-background);
         margin-left: -10px;
         padding-left: 10px;
