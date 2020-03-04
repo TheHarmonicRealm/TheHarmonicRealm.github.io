@@ -142,7 +142,6 @@
     }
 
     body {
-        font-family: 'Open Sans', sans-serif;
         color: var(--body-color);
         font-size: 13px;
         margin-top: 20px;
@@ -154,6 +153,7 @@
     }
 
     p {
+        font-family: 'Open Sans', sans-serif;
         font-weight: 400;
     }
 
@@ -198,6 +198,7 @@
         padding-left: 0px; */
         text-decoration: dashed;
         font-weight: 300;
+        font-family: 'Open Sans', sans-serif;
     }
 
     .title {
@@ -209,6 +210,7 @@
         text-decoration-color: var(--underline-color);
         text-decoration-style: solid;
         text-decoration-thickness: 3px;
+        font-family: 'Open Sans', sans-serif;
     }
 
     #links {
