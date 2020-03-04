@@ -1,101 +1,109 @@
 <!DOCTYPE html>
 <html>
 <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
-<head><title>Regular Schedule</title>
-<link rel="icon" href="../Images/Logo.svg">
-<link rel="stylesheet" href="schedule-styles.css"/>
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet"> 
 
-<!-- Comment out when testing -->
-<script src="../JS/CurrentSchedule.js"></script>
-<script src="../JS/LoadScheduleLinks.js"></script>
-<script src="../JS/DarkModeSwitching.js"></script>
-<script>
-    window.onload = function(){
-        setColorsAndButtonText();
-        loadLinks();
-    }
-</script>
+<head>
+    <title>Regular Schedule</title>
+    <link rel="icon" href="../Images/Logo.svg">
+    <link rel="stylesheet" href="schedule-styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
+
+    <!-- Comment out when testing -->
+    <script src="../JS/CurrentSchedule.js"></script>
+    <script src="../JS/LoadScheduleLinks.js"></script>
+    <script src="../JS/DarkModeSwitching.js"></script>
+    <script>
+        window.onload = function () {
+            setColorsAndButtonText();
+            loadLinks();
+        }
+    </script>
 </head>
+
 <body>
-    <div id = "background">
-        <div id = "links"></div>
+    <div id="background">
+        <div id="links"></div>
         <button onclick="darkModeSwitch()" id="darkModeButton">the JS is not working</button>
-        <div id = "content">
-            <div id = "1">
-                <h1 class = "title">
-                Monday Schedule
+        <div id="content">
+            <div id="1">
+                <h1 class="title">
+                    Monday Schedule
                 </h1>
-                
-                <p> 
-                Period 1: 8:45 – 9:25<br>
-                Period 2: 9:32 – 10:12<br>
-                Period 3: 10:19 – 10:59<br>
-                Period 4: 11:06 – 11:46<br>  
-                <br><br>
-                <em>(1st Lunch)</em><br>       
-                Lunch: 11:53 – 12:23<br> 
-                Period 5: 12:23 – 1:03<br><br>
 
-                <em>(2nd Lunch)</em><br>       
-                Period 5: 11:53 – 12:33<br> 
-                Lunch: 12:33 – 1:03<br><br>
+                <p>
+                    Period 1: 8:45 – 9:25<br>
+                    Period 2: 9:32 – 10:12<br>
+                    Period 3: 10:19 – 10:59<br>
+                    Period 4: 11:06 – 11:46<br>
+                    <br>
+                    <em>(1st Lunch)</em><br>
+                    Lunch: 11:53 – 12:23<br>
+                    Period 5: 12:23 – 1:03<br><br>
 
-                Period 6: 1:10 – 1:50  
+                    <em>(2nd Lunch)</em><br>
+                    Period 5: 11:53 – 12:33<br>
+                    Lunch: 12:33 – 1:03<br><br>
+
+                    Period 6: 1:10 – 1:50
                 </p>
             </div>
-            
-            <div id = "2"><div id = "4">
-                <h1 class = "title">
-                Tuesday-Thursday Schedule
-                </h1>
-                
-                <p> 
-                Period 1: 8:45 – 10:35<br>
-                <br><br>
-                Break: 10:35 – 10:50<br><br>
 
-                Period 3: 10:50 – 11:45<br>  
-                <br><br>
-                <em>(1st Lunch)</em><br>       
-                Lunch: 11:45 – 12:20<br> 
-                Period 3: 12:25 – 1:15<br><br>
+            <div id="2">
+                <div id="4">
+                    <h1 class="title">
+                        Tuesday-Thursday Schedule
+                    </h1>
 
-                <em>(2nd Lunch)</em><br>       
-                Period 3: 10:50 – 12:40 <br> 
-                Lunch: 12:40 – 1:15<br><br>
+                    <p>
+                        Period 1: 8:45 – 10:35<br>
+                        <br>
+                        Break: 10:35 – 10:50<br>
+                        <br>
+                        Period 3: 10:50 – 11:45<br>
+                        <br>
+                        <em>(1st Lunch)</em><br>
+                        Lunch: 11:45 – 12:20<br>
+                        Period 3: 12:25 – 1:15<br>
+                        <br>
+                        <em>(2nd Lunch)</em><br>
+                        Period 3: 10:50 – 12:40 <br>
+                        Lunch: 12:40 – 1:15<br>
+                        <br>
+                        Period 5: 1:20 – 3:10
+                    </p>
+                </div>
+            </div>
 
-                Period 5: 1:20 – 3:10  
-                </p>
-            </div></div>
 
-            
-            <div id = "3"><div id = "5">
+            <div id="3">
+                <div id="5">
 
-                <h1 class = "title">
-                Wednesday-Friday Schedule
-                </h1>
+                    <h1 class="title">
+                        Wednesday-Friday Schedule
+                    </h1>
 
-                <p> 
-                Period 2: 8:45 – 10:35<br>
-                <br><br>
-                Break: 10:35 – 10:50<br><br>
-
-                Period 4: 10:50 – 11:45<br>  
-                <br><br>
-                <em>(1st Lunch)</em><br>       
-                Lunch: 11:45 – 12:20<br> 
-                Period 4: 12:25 – 1:15<br><br>
-
-                <em>(2nd Lunch)</em><br>       
-                Period 4: 10:50 – 12:40 <br> 
-                Lunch: 12:40 – 1:15<br><br>
-
-                Period 6: 1:20 – 3:10  
-                </p>
-            </div></div>
+                    <p>
+                        Period 2: 8:45 – 10:35<br>
+                        <br>
+                        Break: 10:35 – 10:50<br>
+                        <br>
+                        Period 4: 10:50 – 11:45<br>
+                        <br>
+                        <em>(1st Lunch)</em><br>
+                        Lunch: 11:45 – 12:20<br>
+                        Period 4: 12:25 – 1:15<br>
+                        <br>
+                        <em>(2nd Lunch)</em><br>
+                        Period 4: 10:50 – 12:40 <br>
+                        Lunch: 12:40 – 1:15<br>
+                        <br>
+                        Period 6: 1:20 – 3:10
+                    </p>
+                </div>
+            </div>
         </div>
     </div>
 
 </body>
+
 </html>

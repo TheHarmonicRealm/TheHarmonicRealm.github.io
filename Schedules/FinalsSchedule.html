@@ -1,65 +1,69 @@
 <!DOCTYPE html>
 <html>
 <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
-<head><title>Finals Schedule</title>
-<link rel="icon" href="../Images/Logo.svg">
-<link rel="stylesheet" href="schedule-styles.css"/>
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet"> 
 
-<!-- Comment out when testing -->
-<script src="../JS/CurrentSchedule.js"></script>
-<script src="../JS/LoadScheduleLinks.js"></script>
-<script src="../JS/DarkModeSwitching.js"></script>
-<script>
-    window.onload = function(){
-        setColorsAndButtonText();
-        loadLinks();
-    }
-</script>
+<head>
+    <title>Finals Schedule</title>
+    <link rel="icon" href="../Images/Logo.svg">
+    <link rel="stylesheet" href="schedule-styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
+
+    <!-- Comment out when testing -->
+    <script src="../JS/CurrentSchedule.js"></script>
+    <script src="../JS/LoadScheduleLinks.js"></script>
+    <script src="../JS/DarkModeSwitching.js"></script>
+    <script>
+        window.onload = function () {
+            setColorsAndButtonText();
+            loadLinks();
+        }
+    </script>
 </head>
+
 <body>
-    <div id = "background">
-        <div id = "links"></div>
+    <div id="background">
+        <div id="links"></div>
         <button onclick="darkModeSwitch()" id="darkModeButton">the JS is not working</button>
-        <div id = "content">
-            <div id = "1">
-                <h1 class = "title">
-                Monday Schedule
+        <div id="content">
+            <div id="1">
+                <h1 class="title">
+                    Monday Schedule
                 </h1>
-                
-                <p> 
-                Period 1: 8:45 – 10:10<br>
-                Break: 10:10 - 10:20<br>
-                Period 2: 10:20 - 11:45<br>
-                </p>
-            </div>
-            
-            <div id = "2">
-                <h1 class = "title">
-                Tuesday Schedule
-                </h1>
-                
-                <p> 
-                Period 3: 8:45 – 10:10<br>
-                Break: 10:10 - 10:20<br>
-                Period 4: 10:20 - 11:45<br>
+
+                <p>
+                    Period 1: 8:45 – 10:10<br>
+                    Break: 10:10 - 10:20<br>
+                    Period 2: 10:20 - 11:45<br>
                 </p>
             </div>
 
-            
-            <div id = "3">
-
-                <h1 class = "title">
-                Wednesday Schedule
+            <div id="2">
+                <h1 class="title">
+                    Tuesday Schedule
                 </h1>
 
-                <p> 
-                Period 5: 8:45 – 10:10<br>
-                Break: 10:10 - 10:20<br>
-                Period 6: 10:20 - 11:45<br>  
+                <p>
+                    Period 3: 8:45 – 10:10<br>
+                    Break: 10:10 - 10:20<br>
+                    Period 4: 10:20 - 11:45<br>
+                </p>
+            </div>
+
+
+            <div id="3">
+
+                <h1 class="title">
+                    Wednesday Schedule
+                </h1>
+
+                <p>
+                    Period 5: 8:45 – 10:10<br>
+                    Break: 10:10 - 10:20<br>
+                    Period 6: 10:20 - 11:45<br>
                 </p>
             </div>
         </div>
     </div>
 </body>
+
 </html>
