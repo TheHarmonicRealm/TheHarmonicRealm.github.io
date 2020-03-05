@@ -2,6 +2,7 @@
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+        font-family: 'Open Sans', sans-serif;
     }
 
     :root {
@@ -142,7 +143,6 @@
     }
 
     body {
-        font-family: 'Open Sans', sans-serif;
         color: var(--body-color);
         font-size: 13px;
         margin-top: 20px;
@@ -151,11 +151,9 @@
     #content {
         padding-left: 0px;
         margin-left: 10px;
-        font-family: 'Open Sans', sans-serif;
     }
 
     p {
-        font-family: 'Open Sans', sans-serif;
         font-weight: 400;
     }
 
@@ -177,7 +175,6 @@
         font-size: 14px;
         margin-top: 10px;
         margin-left: 10px;
-        font-family: 'Open Sans', sans-serif;
         width: 258px;
         height: 50px;
         border-radius: 8px;
@@ -200,7 +197,6 @@
         padding-left: 0px; */
         text-decoration: dashed;
         font-weight: 300;
-        font-family: 'Open Sans', sans-serif;
     }
 
     .title {
@@ -212,7 +208,6 @@
         text-decoration-color: var(--underline-color);
         text-decoration-style: solid;
         text-decoration-thickness: 3px;
-        font-family: 'Open Sans', sans-serif;
     }
 
     #links {
