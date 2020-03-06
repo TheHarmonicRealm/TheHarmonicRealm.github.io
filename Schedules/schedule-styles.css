@@ -11,34 +11,34 @@
         --links-gradient: linear-gradient(to right, var(--links-gradient-left), var(--links-gradient-right));
 
         /* light mode; shows if JS doesn't work */
-        --inactive: white;
-        --hover: white;
-        --active: white;
-        --inactive-underline: white;
-        --hover-underline: white;
-        --active-underline: white;
-        --link-underline-width: white;
+        --inactive: rgb(255, 123, 35);
+        --hover: rgb(255, 112, 17);
+        --active: rgb(240, 96, 0);
+        --inactive-underline: var(--inactive);
+        --hover-underline: var(--hover);
+        --active-underline: var(--active);
+        --link-underline-width: 1px;
         
-        --background-color: white;
-        --body-color: white;
+        --background-color: rgb(103, 223, 253);
+        --body-color: rgb(0, 0, 0);
 
-        --links-border-color: white;
+        --links-border-color: rgb(255, 119, 29);
         /* TODO: these */
-        --links-gradient-left: white;
-        --links-gradient-right: white;
+        --links-gradient-left: rgb(50, 214, 255);
+        --links-gradient-right: rgb(163, 237, 255);
 
-        --title-color: white;
-        --title-background: white;
-        --underline-color: white;
+        --title-color: rgb(0, 194, 243);
+        --title-background: rgb(163, 237, 255);
+        --underline-color: rgb(255, 102, 0);
 
-        --background-gradient-left: white;
-        --background-gradient-right: white;
+        --background-gradient-left: rgb(50, 214, 255);
+        --background-gradient-right: rgb(163, 237, 255);
 
-        --button-background: white;
-        --button-text: white;
-        --button-hover-background: white;
-        --button-hover-text: white;
-        --button-border: white;
+        --button-background: rgb(163, 237, 255);
+        --button-text: rgb(0, 0, 0);
+        --button-hover-background: rgb(0, 204, 255);
+        --button-hover-text: rgb(0, 0, 0);
+        --button-border: rgb(0, 0, 0);
 
         --selection-color: red;
 
