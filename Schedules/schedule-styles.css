@@ -54,13 +54,13 @@
         --light-background-color: rgb(103, 223, 253);
         --light-body-color: rgb(0, 0, 0);
         
-        --light-links-border-color: rgb(255, 119, 29);
+        --light-links-border-color: rgb(163, 237, 255);
         --light-links-background: rgb(163, 237, 255);
         /* TODO: these */
-        --light-links-gradient-left: rgb(50, 214, 255);
+        --light-links-gradient-left: rgb(0, 180, 224);
         --light-links-gradient-right: rgb(163, 237, 255);
         
-        --light-title-color: rgb(0, 194, 243);
+        --light-title-color: rgb(0, 141, 177);
         --light-title-background: rgb(163, 237, 255);
         --light-underline-color: rgb(255, 102, 0);
         
@@ -89,7 +89,7 @@
         --dark-links-border-color: rgb(219, 88, 0);
         --dark-links-background: rgb(255, 119, 29);
         /* TODO: these */
-        --dark-links-gradient-left: rgb(219, 88, 0);
+        --dark-links-gradient-left: rgb(139, 56, 0);
         --dark-links-gradient-right: rgb(219, 88, 0);
 
         --dark-title-color: rgb(255, 255, 255);
