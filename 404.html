@@ -1,15 +1,32 @@
 <!DOCTYPE html>
-<html><title>404</title>
+<html>
+<title>404</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
+
 <head>
-<link href='https://fonts.googleapis.com/css?family=IM Fell English' rel='stylesheet'>
-<link rel="icon" href="https://theharmonicrealm.github.io/Images/SpartansLogo.jpg">
-<link rel="stylesheet" href="styles.css"/>
+    <link href='https://fonts.googleapis.com/css?family=IM Fell English' rel='stylesheet'>
+    <link rel="icon" href="https://theharmonicrealm.github.io/Images/SpartansLogo.jpg">
+    <link rel="stylesheet" href="Schedules/schedule-styles.css" />
+    <script src="JS/LoadScheduleLinks.js"></script>
+    <script src="JS/DarkModeSwitching.js"></script>
+    <script>
+        window.onload = function () {
+            setColorsAndButtonText();
+            loadLinks();
+        }
+    </script>
 </head>
+
 <body>
-<h1>404 problem</h1>
-<p>
-You may return to <a href="https://TheHarmonicRealm.github.io/index.html">the homepage</a>
-</p>
+    <div id="background">
+        <div id="links"></div>
+        <div id="content">
+            <h1>404 problem</h1 class="title">
+            <p>
+                You may return to <a href="https://TheHarmonicRealm.github.io/index.html">the homepage</a>
+            </p>
+        </div>
+    </div>
 </body>
+
 </html>
