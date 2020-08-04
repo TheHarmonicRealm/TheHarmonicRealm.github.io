@@ -1,23 +1,20 @@
+<script src="JS/SVGMain.js"></script>
+<script src="JS/SVGGeneration.js"></script>
 <script>
-    var svgInput;
-    var widthInput;
-    var heightInput;
-    function setValues() {
-        svgInput = document.getElementById("main-input").value;
-        widthInput = document.getElementById("width-input").value;
-        heightInput = document.getElementById("height-input").value;
+
+    window.onload = function () {
+        document.getElementById("render-button").addEventListener("click", function () {
+            setValues();
+            renderSVG();
+        });
     }
-    function renderSVG() {
-        document.getElementById("svg-display").innerHTML = svgInput;
-        document.getElementById("svg-display").setAttribute("width", widthInput);
-        document.getElementById("svg-display").setAttribute("height", heightInput);
-    }
+
 </script>
 
 <style>
     textarea {
-        width: 1000px;
-        height: 400px;
+        width: 50%;
+        height: 300px;
     }
 </style>
 
@@ -32,7 +29,12 @@ Set canvas width:
 Canvas height:
 <input type="number" id="height-input"></input>
 
-<button onclick="setValues();renderSVG()" id="render-button">Click to render</button>
+File name:
+<input type="number" id="height-input"></input>.svg
+
+<button id="render-button">Click to render</button>
+
+<a href="" id="download-svg">Download rendered file</a>
 
 <svg id="svg-display" width="100" height="100">
 </svg>
