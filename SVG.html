@@ -1,0 +1,30 @@
+<script>
+    function renderSVG() {
+        document.getElementById("svg-display").innerHTML = document.getElementById("main-input").value;
+        document.getElementById("svg-display").setAttribute("width", document.getElementById("width-input").value);
+        document.getElementById("svg-display").setAttribute("height", document.getElementById("height-input").value);
+    }
+</script>
+
+<style>
+    textarea {
+        width: 1000px;
+        height: 400px;
+    }
+</style>
+
+<h1>SVG editor</h1>
+
+Main SVG code:<br><br>
+<textarea type="text" id="main-input" height=1000 wideht></textarea><br><br>
+
+Set canvas width:
+<input type="number" id="width-input"></input>
+
+Canvas height:
+<input type="number" id="height-input"></input>
+
+<button onclick="renderSVG()" id="render-button">Click to render</button>
+
+<svg id="svg-display" width="100" height="100">
+</svg>
