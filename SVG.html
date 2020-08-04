@@ -15,6 +15,7 @@
             renderSVG();
         });
         document.getElementById("download-svg").addEventListener("click", function () {
+            setValues();
             generateContentOfFile();
             // Generate download of hello.txt file with some content
             downloadSVG(fullFilename, completeSVG);
