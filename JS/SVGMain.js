@@ -13,8 +13,7 @@ function setValues() {
 }
 function renderSVG() {
     document.getElementById("svg-display").innerHTML = svgInput;
-    document.getElementById("svg-display").setAttribute("width", widthInput);
-    document.getElementById("svg-display").setAttribute("height", heightInput);
+    document.getElementById("svg-display").setAttribute("viewBox", `0 0 ${widthInput} ${heightInput}`);
 }
 
 
