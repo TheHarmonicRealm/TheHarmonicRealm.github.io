@@ -1,7 +1,14 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='UTF-8' />
+    <title>Floats</title>
+    <link rel='stylesheet' href='svg-styles.css' />
+</head>
 <script src="JS/SVGMain.js"></script>
 <script src="JS/SVGGeneration.js"></script>
 <script>
-
     window.onload = function () {
         document.getElementById("render-button").addEventListener("click", function () {
             setValues();
@@ -13,32 +20,38 @@
             downloadSVG(fullFilename, completeSVG);
         });
     }
-
 </script>
 
 <style>
-    textarea {
-        width: 50%;
-        height: 300px;
-    }
+
 </style>
 
 <h1>SVG editor</h1>
 
 Main SVG code:<br><br>
-<textarea type="text" id="main-input" height=1000 wideht></textarea><br><br>
+<div id="top-div">
+    <div id="main-input-div">
+        <textarea type="text" id="main-input"></textarea>
+    </div>
+    <div id="svg-display-div">
+        <svg id="svg-display" width="100" height="100"></svg>
+    </div>
+</div>
 
-Set canvas width:
-<input type="number" id="width-input"></input>
+<div id="size-name-entry">
+    <br><br><br>
+    Set canvas width:
+    <input type="number" id="width-input" value="1000" autocomplete="off"></input>
 
-Canvas height:
-<input type="number" id="height-input"></input>
+    Canvas height:
+    <input type="number" id="height-input" value="1000" autocomplete="off"></input>
 
-File name:
-<input type="text" id="filename-input"></input>.svg
+    File name:
+    <input type="text" id="filename-input" autocomplete="off"></input>.svg
 
-<button id="render-button">Click to render</button>
+    <button id="render-button">Click to render</button>
 
-<button id="download-svg">Download rendered file</button>
+    <button id="download-svg">Download rendered file</button>
+</div>
 
-<svg id="svg-display" width="100" height="100"></svg>
+</html>

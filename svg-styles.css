@@ -1,0 +1,29 @@
+#svg-display {
+    display: block;
+}
+
+#size-name-entry {
+    display: block;
+    clear: both;
+}
+
+textarea {
+    display: block;
+    background-color: red;
+    color: white;
+    height: 300px;
+}
+
+#main-input-div {
+    display: block;
+    float: left;
+    height: 300px;
+    width: 200px;
+}
+
+#svg-display-div {
+    display: block;
+    float: left;
+    height: 300px;
+    width: 200px;
+}
