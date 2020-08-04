@@ -1,8 +1,16 @@
 <script>
+    var svgInput;
+    var widthInput;
+    var heightInput;
+    function setValues() {
+        svgInput = document.getElementById("main-input").value;
+        widthInput = document.getElementById("width-input").value;
+        heightInput = document.getElementById("height-input").value;
+    }
     function renderSVG() {
-        document.getElementById("svg-display").innerHTML = document.getElementById("main-input").value;
-        document.getElementById("svg-display").setAttribute("width", document.getElementById("width-input").value);
-        document.getElementById("svg-display").setAttribute("height", document.getElementById("height-input").value);
+        document.getElementById("svg-display").innerHTML = svgInput;
+        document.getElementById("svg-display").setAttribute("width", widthInput);
+        document.getElementById("svg-display").setAttribute("height", heightInput);
     }
 </script>
 
@@ -24,7 +32,7 @@ Set canvas width:
 Canvas height:
 <input type="number" id="height-input"></input>
 
-<button onclick="renderSVG()" id="render-button">Click to render</button>
+<button onclick="setValues();renderSVG()" id="render-button">Click to render</button>
 
 <svg id="svg-display" width="100" height="100">
 </svg>
