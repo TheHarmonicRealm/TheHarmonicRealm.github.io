@@ -32,7 +32,7 @@ function moveEllipse(id, xChange, yChange) {
 function doAnimation() {
     //moveEllipse('test-ellipse', 10, -10);
     //moveRect('test-rect', 1, 1);
-    changeColor('test-rect', "1", "1", "1");
+    changeColor('test-rect', "3", "3", "3");
 }
 
 //Takes the id of an element and how much to change it by 
@@ -47,11 +47,11 @@ function changeColor(id, redChangeString, greenChangeString, blueChangeString) {
     console.log("current color:" + currentColor);
 
     var currentRed = parseInt(currentColor.substr(1,2), 16);
-    var currentGreen16 = currentColor.substr(3,4);
+    var currentGreen16 = currentColor.substr(3,2);
     console.log("current green before parse:" + currentGreen16);
-    var currentGreen = parseInt(currentColor.substr(3,4), 16);
+    var currentGreen = parseInt(currentColor.substr(3,2), 16);
     console.log("parsed green:" + currentGreen);
-    var currentBlue = parseInt(currentColor.substr(5,6), 16);
+    var currentBlue = parseInt(currentColor.substr(5,2), 16);
 
     var newRed = currentRed + redChange16;
     var newGreen = currentGreen + greenChange16;
