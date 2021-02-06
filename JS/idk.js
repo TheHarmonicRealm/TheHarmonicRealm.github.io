@@ -31,10 +31,11 @@ function moveEllipse(id, xChange, yChange) {
 
 function doAnimation() {
     //moveEllipse('test-ellipse', 10, -10);
-    moveRect('test-rect', 1, 1);
-    changeColor('test-rect', "1", "0", "0");
+    //moveRect('test-rect', 1, 1);
+    changeColor('test-rect', "1", "1", "1");
 }
 
+//Takes the id of an element and how much to change it by 
 function changeColor(id, redChangeString, greenChangeString, blueChangeString) {
     var element = document.getElementById(id);
 
@@ -43,13 +44,18 @@ function changeColor(id, redChangeString, greenChangeString, blueChangeString) {
     var blueChange16 = parseInt(blueChangeString, 16);
 
     var currentColor = element.getAttribute('fill');
+    console.log("current color:" + currentColor);
 
     var currentRed = parseInt(currentColor.substr(1,2), 16);
+    var currentGreen16 = currentColor.substr(3,4);
+    console.log("current green before parse:" + currentGreen16);
     var currentGreen = parseInt(currentColor.substr(3,4), 16);
+    console.log("parsed green:" + currentGreen);
     var currentBlue = parseInt(currentColor.substr(5,6), 16);
 
     var newRed = currentRed + redChange16;
     var newGreen = currentGreen + greenChange16;
+    console.log("new green before modification:" + newGreen);
     var newBlue = currentBlue + blueChange16;
     
     if(newRed > 255) {
@@ -59,6 +65,7 @@ function changeColor(id, redChangeString, greenChangeString, blueChangeString) {
     if(newGreen > 255) {
         newGreen = 255;
     }
+    console.log("new green after limiting:" + newGreen);
 
     if(newBlue > 255) {
         newBlue = 255;
@@ -66,6 +73,7 @@ function changeColor(id, redChangeString, greenChangeString, blueChangeString) {
 
     var newRedString = newRed.toString(16);
     var newGreenString = newGreen.toString(16);
+    console.log("new green string before adding zeros:" + newGreenString);
     var newBlueString = newBlue.toString(16);
 
     if(newRedString.length < 2) {
@@ -75,12 +83,15 @@ function changeColor(id, redChangeString, greenChangeString, blueChangeString) {
     if(newGreenString.length < 2) {
         newGreenString = "0" + newGreenString;
     }
+    console.log("new green string after adding zeros:" + newGreenString);
 
     if(newBlueString.length < 2) {
         newBlueString = "0" + newBlueString;
     }
 
     var newColor = "#" + newRedString + newGreenString + newBlueString;
-    console.log(newColor);
+    console.log("final new color:" + newColor);
     element.setAttribute('fill', newColor);
+    console.log("what the color was set to:" + element.getAttribute('fill'));
 }
+
