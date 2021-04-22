@@ -9,6 +9,37 @@ var svgDiv = document.getElementById('svg-display');
 svgDiv.appendChild(rectangle1);
 */
 
+function getRed(colorString) {
+    red = parseInt(colorString.substr(1,2), 16);
+}
+
+function getGreen(colorString) {
+    green = parseInt(colorString.substr(3,2), 16);
+}
+
+function getBlue(colorString) {
+    blue = parseInt(colorString.substr(5,2), 16);
+}
+
+function getSingleColorFromString(colorString, choice) {
+    if(choice == "red") {
+        return getRed(colorString);
+    }
+    if(choice == "green") {
+        return getGreen(colorString);
+    }
+    if(choice == "blue") {
+        return getBlue(colorString);
+    }
+    else {
+        return "error";
+    }
+}
+
+function getSingleColorFromObject(id, choice) {
+    return getSingleColorFromString(getColorStringFromObject(id), choice);
+}
+
 function moveRect(id, xChange, yChange) {
     var element = document.getElementById(id);
     var currentX = parseFloat(element.getAttribute('x'), 10);
@@ -21,18 +52,45 @@ function moveRect(id, xChange, yChange) {
 
 function moveEllipse(id, xChange, yChange) {
     var element = document.getElementById(id);
-    var currentX = parseFloat(element.getAttribute('cx'), 10);
-    var currentY = parseFloat(element.getAttribute('cy'), 10);
+    var currentX = fetchAttributeFloat(id, 'cx');
+    var currentY = fetchAttributeFloat(id, 'cy');
     var newX = currentX + xChange + "px";
     var newY = currentY + yChange + "px";
-    element.setAttribute('cx', newX);
-    element.setAttribute('xy', newY);
+    setAttribute(id, 'cx', newX);
+    setAttribute(id, 'cy', newY);
 }
 
+function getColorStringFromObject(id) {
+    return document.getElementById(id).getAttribute('fill');
+}
+
+function fetchAttributeFloat(id, attribute) {
+    return parseFloat(document.getElementById(id).getAttribute(attribute), 10);
+}
+function setAttribute(id, attribute, value) {
+    document.getElementById(id).setAttribute(attribute, value);
+}
+
+var ellipseState = "moving right";
+var count = 0;
 function doAnimation() {
-    //moveEllipse('test-ellipse', 10, -10);
+    ellipseState == "moving right" ? fetchAttributeFloat('test-ellipse','cx') >= 1000 ? ellipseState = "moving down" : moveEllipse('test-ellipse', 10, 0) : null;
+    
+    ellipseState == "moving down" ? fetchAttributeFloat('test-ellipse','cy') >= 500 ? ellipseState = "moving left" : moveEllipse('test-ellipse', 0, 10) : null;
+    
+    ellipseState == "moving left" ? fetchAttributeFloat('test-ellipse','cx') <= 300 ? ellipseState = "moving up" : moveEllipse('test-ellipse', -10, 0) : null;
+
+    ellipseState == "moving up" ? fetchAttributeFloat('test-ellipse','cy') <= 300 ? ellipseState = "moving right" : moveEllipse('test-ellipse', 0, -10) : null;
+    count ++;
+    document.getElementById("counter-display").innerHTML = count;
+
     //moveRect('test-rect', 1, 1);
-    changeColor('test-rect', "3", "3", "3");
+    /*if(parseInt(document.getElementById('test-rect').getAttribute('fill').substr(1,2), 16) <= 200){
+    setInterval(changeColor('test-rect', "2", "0", "0"));
+    }*/
+    /*if(parseInt(document.getElementById('test-rect').getAttribute('fill').substr(1,2), 16) > 200){
+        changeColor('test-rect', "-1", "0", "0");
+    }*/
 }
 
 //Takes the id of an element and how much to change it by 

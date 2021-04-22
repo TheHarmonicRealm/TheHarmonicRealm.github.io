@@ -10,7 +10,8 @@
 <script>
     window.onload = function () {
         //run parameter1 function every parameter2 milliseconds; add the function's arguments as optional parameters after parameter2
-        var runLoop = setInterval(doAnimation, 250);
+        var runLoop = setInterval(doAnimation, 7);
+        //doAnimation();
     }
 </script>
 
@@ -20,7 +21,10 @@
 
 <svg id="svg-display" class="overlay" width="100%" height="100%">
     <rect width="100px" height="200px" x="25px" y="76px" fill="#000000" id='test-rect'></rect>
-    <ellipse rx="100px" ry="200px" cx="200px"c y="76px" fill="red" id='test-ellipse'></ellipse>
+    <ellipse rx="100px" ry="200px" cx="200px" cy="200px" fill="red" id='test-ellipse'></ellipse>
 </svg>
+<h1 id="counter-display">
+    0
+</h1>
 
 </html>
