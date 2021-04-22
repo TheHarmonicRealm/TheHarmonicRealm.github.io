@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='UTF-8' />
+    <title>User Agent test</title>
+</head>
+<script src="JS/UserAgent.js"></script>
+<script>
+    window.onload = function () {
+        var userAgent = NavigatorID.userAgent;
+        alert(userAgent);
+        document.getElementById("user-agent").innerHTML = userAgent;
+    }
+</script>
+
+<style>
+
+</style>
+
+<h1>Getting user agent</h1>
+
+Browser User Agent:
+    <div id="user-agent">
+            
+    </div>
+
+</html>
