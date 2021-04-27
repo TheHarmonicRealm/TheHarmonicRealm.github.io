@@ -50,7 +50,7 @@ function moveRect(id, xChange, yChange) {
     element.setAttribute('y', newY);
 }
 
-function moveEllipse(id, xChange, yChange) {
+function moveElement(id, xChange, yChange) {
     var element = document.getElementById(id);
     var currentX = fetchAttributeFloat(id, 'cx');
     var currentY = fetchAttributeFloat(id, 'cy');
@@ -72,17 +72,31 @@ function setAttribute(id, attribute, value) {
 }
 
 var ellipseState = "moving right";
-var count = 0;
+var rectState = "stretching horizontally";
+var frameCount = 0;
+var wavePower = 0;
+var waveDistance = 0;
 function doAnimation() {
-    ellipseState == "moving right" ? fetchAttributeFloat('test-ellipse','cx') >= 1000 ? ellipseState = "moving down" : moveEllipse('test-ellipse', 10, 0) : null;
+    requestAnimationFrame(doAnimation);
+    /*
+    ellipseState == "moving right" ? fetchAttributeFloat('test-ellipse','cx') >= 1000 ? ellipseState = "moving down" : moveElement('test-ellipse', 10, 0) : null;
     
-    ellipseState == "moving down" ? fetchAttributeFloat('test-ellipse','cy') >= 500 ? ellipseState = "moving left" : moveEllipse('test-ellipse', 0, 10) : null;
+    ellipseState == "moving down" ? fetchAttributeFloat('test-ellipse','cy') >= 500 ? ellipseState = "moving left" : moveElement('test-ellipse', 0, 10) : null;
     
-    ellipseState == "moving left" ? fetchAttributeFloat('test-ellipse','cx') <= 300 ? ellipseState = "moving up" : moveEllipse('test-ellipse', -10, 0) : null;
+    ellipseState == "moving left" ? fetchAttributeFloat('test-ellipse','cx') <= 300 ? ellipseState = "moving up" : moveElement('test-ellipse', -10, 0) : null;
 
-    ellipseState == "moving up" ? fetchAttributeFloat('test-ellipse','cy') <= 300 ? ellipseState = "moving right" : moveEllipse('test-ellipse', 0, -10) : null;
-    count ++;
-    document.getElementById("counter-display").innerHTML = count;
+    ellipseState == "moving up" ? fetchAttributeFloat('test-ellipse','cy') <= 300 ? ellipseState = "moving right" : moveElement('test-ellipse', 0, -10) : null;*/
+    
+    wavePower += 1/10;
+    waveDistance = 5*Math.pow(-1, Math.trunc(wavePower));
+    //wavePower >= 2 ? wavePower = 0 : wavePower += 1/10;
+    setAttribute('test-ellipse', 'height', (fetchAttributeFloat('test-ellipse', 'height') + 100*waveDistance));
+    ellipseState == "moving right" ? fetchAttributeFloat('test-ellipse','cx') >= 1000 ? ellipseState = "moving left" : moveElement('test-ellipse', 10, 0) : null;
+    ellipseState == "moving left" ? fetchAttributeFloat('test-ellipse','cx') <= 300 ? ellipseState = "moving right" : moveElement('test-ellipse', -10, 0) : null;
+    moveElement('test-ellipse', 0, waveDistance);
+//    rectState == "stretching horizontally" ? fetchAttributeFloat('test-rect','width') <= 300 ? rectState = "stretching vertically" : moveElement('test-ellipse', -10, 0) : null;
+    frameCount ++;
+    document.getElementById("counter-display").innerHTML = frameCount;
 
     //moveRect('test-rect', 1, 1);
     /*if(parseInt(document.getElementById('test-rect').getAttribute('fill').substr(1,2), 16) <= 200){
@@ -152,4 +166,3 @@ function changeColor(id, redChangeString, greenChangeString, blueChangeString) {
     element.setAttribute('fill', newColor);
     console.log("what the color was set to:" + element.getAttribute('fill'));
 }
-
