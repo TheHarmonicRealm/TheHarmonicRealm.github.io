@@ -76,6 +76,7 @@ var rectState = "stretching horizontally";
 var frameCount = 0;
 var wavePower = 0;
 var waveDistance = 0;
+var stretchCount = 0;
 function doAnimation() {
     requestAnimationFrame(doAnimation);
     /*
@@ -94,7 +95,17 @@ function doAnimation() {
     ellipseState == "moving right" ? fetchAttributeFloat('test-ellipse','cx') >= 1000 ? ellipseState = "moving left" : moveElement('test-ellipse', 10, 0) : null;
     ellipseState == "moving left" ? fetchAttributeFloat('test-ellipse','cx') <= 300 ? ellipseState = "moving right" : moveElement('test-ellipse', -10, 0) : null;
     moveElement('test-ellipse', 0, waveDistance);
-//    rectState == "stretching horizontally" ? fetchAttributeFloat('test-rect','width') <= 300 ? rectState = "stretching vertically" : moveElement('test-ellipse', -10, 0) : null;
+    rectState == "stretching horizontally" ? fetchAttributeFloat('test-rect','width') >= 300 ? rectState = "stretching vertically" : setAttribute('test-rect', 'width', (fetchAttributeFloat('test-rect', 'width')+5)+'px') : null;
+    rectState == "stretching vertically" ? fetchAttributeFloat('test-rect','height') >=400 ? rectState = "shrinking horizontally" : setAttribute('test-rect', 'height', (fetchAttributeFloat('test-rect', 'height')+8)+'px') : null;
+    frameCount ++;
+    rectState == "shrinking horizontally" ? fetchAttributeFloat('test-rect','width') <= 100 ? rectState = "shrinking vertically" : setAttribute('test-rect', 'width', (fetchAttributeFloat('test-rect', 'width')-7)+'px') : null;
+    rectState == "shrinking vertically" ? fetchAttributeFloat('test-rect','height') <= 200 ? rectState = "stretching horizontally" : setAttribute('test-rect', 'height', (fetchAttributeFloat('test-rect', 'height')-15)+'px') : null;
+    
+    // frameCount/Math.PI*180) -- convert to radians. takes pi for sine to turn so it's 180 frames without coefficient to turn
+    moveElement('test-ball', 0, 10*Math.sin(30*frameCount/(Math.PI*180)));
+    setAttribute('test-ball', 'ry', 60-3*((fetchAttributeFloat('test-ball', 'cy')-200)/(10)));
+    //if(fetchAttributeFloat('test-ball', 
+    
     frameCount ++;
     document.getElementById("counter-display").innerHTML = frameCount;
 
