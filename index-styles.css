@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --inactive: rgb(255, 123, 35);
+    --hover: rgb(255, 112, 17);
+    --active: rgb(240, 96, 0);
+    --inactive-underline: var(--inactive);
+    --hover-underline: var(--hover);
+    --active-underline: var(--active);
+    --link-underline-width: 1px;
+    --background-color: rgb(103, 223, 253);
+    --body-color: rgb(0, 0, 0);
+    --links-background: rgb(163, 237, 255);
+    --title-color: rgb(0, 194, 243);
+    --title-background: rgb(163, 237, 255);
+    --underline-color: rgb(255, 102, 0);
+    --background-gradient-top: rgb(50, 214, 255);
+    --background-gradient-bottom: rgb(163, 237, 255);
+    --background-gradient-background: linear-gradient(to right, var(--background-gradient-top), var(--background-gradient-bottom));
+}
+
+a {
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-thickness: 1px;
+}
+
+/* unvisited link */
+
+a:link {
+    color: var(--inactive);
+    text-decoration-color: var(--inactive-underline);
+}
+
+/* visited link */
+
+a:visited {
+    color: var(--inactive);
+    text-decoration-color: var(--inactive-underline);
+}
+
+/* mouse over link */
+
+a:hover {
+    color: var(--hover);
+    text-decoration-color: var(--hover-underline);
+}
+
+/* selected link */
+
+a:active {
+    color: var(--active);
+    text-decoration-color: var(--active-underline);
+}
+
+body {
+    font-family: monospace;
+    color: var(--body-color);
+}
+
+#content {
+    padding-left: 0px;
+    margin-left: 10px;
+}
+
+#background {
+    /* background-color: var(--background-color); */
+    background-image: var(--background-gradient-background);
+    padding-bottom: 10px;
+}
+
+h1 {
+    display: block;
+    font-size: 2em;
+    margin-bottom: 0.67em;
+    /*margin-top: 0.67em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+    padding-left: 0px; */
+    text-decoration: dashed;
+}
+
+.title {
+    color: var(--title-color);
+    font-weight: normal;
+    background-color: var(--title-background);
+    margin-left: -10px;
+    padding-left: 10px;
+    text-decoration-line: underline overline;
+    text-decoration-color: var(--underline-color);
+    text-decoration-style: solid;
+    text-decoration-thickness: 3px;
+}
+
+ul {
+    margin: 20px;
+
+}
+
+ul li::marker {
+    color: rgb(255, 102, 0);
+}
+
+.proj-link {
+    font-style: italic;
+}
