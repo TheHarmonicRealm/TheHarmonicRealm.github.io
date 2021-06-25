@@ -1,0 +1,17 @@
+
+textarea {
+    display: block;
+    background-color: #b4f0ff;
+    color: rgb(0, 0, 0);
+    height: 20px;
+    width: 400px;
+}
+
+#find-input {
+    
+}
+
+#main-input-div {
+    display: block;
+    float: left;
+}

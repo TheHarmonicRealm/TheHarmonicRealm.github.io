@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='UTF-8' />
+    <title>SVG Editor</title>
+    <link rel='stylesheet' href='regex-styles.css' />
+</head>
+<script src="JS/SVGMain.js"></script>
+<script src="JS/SVGGeneration.js"></script>
+<script>
+    window.onload = function () {
+        document.getElementById("render-button").addEventListener("click", function () {
+            setValues();
+            renderSVG();
+        });
+        document.getElementById("download-svg").addEventListener("click", function () {
+            setValues();
+            generateContentOfFile();
+            // Generate download of hello.txt file with some content
+            downloadSVG(fullFilename, completeSVG);
+        });
+    }
+</script>
+
+<h1>Regex editor</h1>
+
+<div id="top-div">
+    <div id="main-input-div">
+        Equation:
+        <textarea type="text" id="find-input" placeholder="Find"></textarea>
+        <textarea type="text" id="replace-input" placeholder="Replacement"></textarea>
+        Text to modify:
+        <textarea type="text" id="string-input" placeholder="Modifying this"></textarea>
+        <button id="render-button">Click to render</button>
+    </div>
+    <div id="result-display-div">
+        Result:
+        <span id="result-display" width="100%" height="20px"></span>
+    </div>
+</div>
+
+</html>
