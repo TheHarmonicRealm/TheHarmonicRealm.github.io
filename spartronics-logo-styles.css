@@ -1,0 +1,8 @@
+* {
+    margin: 0;
+     padding: 0;
+  }
+#gear {
+    transform-box: fill-box;
+    transform-origin: center;
+}
