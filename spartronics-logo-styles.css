@@ -1,8 +1,22 @@
-* {
-    margin: 0;
-     padding: 0;
-  }
+
 #gear {
     transform-box: fill-box;
     transform-origin: center;
+}
+
+body{
+    width:100%;
+    height:100%;
+    top:0px;
+    left:0px;
+    z-index:1000;
+}
+
+html, body {
+    height:100%;
+    margin:0;
+}
+* {
+  margin: 0;
+  padding: 0;
 }
