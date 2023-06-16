@@ -9,10 +9,11 @@
 
 textarea {
     display: block;
-    background-color: red;
-    color: white;
+    background-color: #FFFEFE;
+    color: #003300;
     height: 300px;
     width: 200px;
+    border-color: #FFAAAA
 }
 
 #main-input-div {

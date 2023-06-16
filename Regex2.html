@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='UTF-8' />
+    <title>Regex runner</title>
+    <link rel='stylesheet' href='regex-styles.css' />
+</head>
+<script src="JS/Regex2.js"></script>
+<script>
+    window.onload = function () {
+        document.getElementById("render-button").addEventListener("click", function () {
+            setValues()
+            runRegexes();
+        });
+    }
+</script>
+
+<h1>Regex editor</h1>
+
+<div id="top-div">
+    <div id="main-input-div">
+        Input
+        <textarea type="text" id="main-input" placeholder="Find"></textarea>
+        <button id="render-button">Click to render</button>
+    </div>
+    <div id="result-display-div">
+        Result:
+        <textarea type="text" id="output-display" placeholder="Output"></textarea>
+    </div>
+</div>
+
+</html>
