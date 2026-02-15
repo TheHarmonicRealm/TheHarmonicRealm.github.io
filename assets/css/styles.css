@@ -46,11 +46,18 @@ a:hover, .homelink:hover {
 }
 
 .footer {
-  font-size: 0.9em;
+  font-size: 1em;
+  font-style: italic;
 }
 
 hr {
-  border-color: rgba(0, 0, 0, 0.6666666667);
+  border: 0 none transparent; /*Get rid of shading with CSS*/
+  border-top: 3px solid rgba(0, 0, 0, 0.3333333333);
+}
+
+.light-hr {
+  border-top-style: dotted;
+  border-top-width: 3px;
 }
 
 h1 {
