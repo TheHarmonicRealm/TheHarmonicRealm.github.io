@@ -19,7 +19,7 @@ body {
   min-height: 100%;
   box-sizing: border-box;
   background-color: #f2f7f4;
-  font-family: "IM Fell French Canon", "Georgia", "Times New Roman", serif;
+  font-family: "Palatino", "Georgia", "URW Bookman", "DejaVu Serif", serif;
 }
 
 p {
@@ -28,7 +28,7 @@ p {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Libre Franklin", "Franklin Gothic", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-family: "Lucida Grande", "Lucida Sans Unicode", system-ui, "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 }
 
 a {
@@ -82,7 +82,7 @@ h2, h3, h4, h5, h6 {
   }
 }
 .libre-franklin {
-  font-family: "Libre Franklin", "Franklin Gothic", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-family: "Lucida Grande", "Lucida Sans Unicode", system-ui, "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 }
 
 /*# sourceMappingURL=styles.css.map */
