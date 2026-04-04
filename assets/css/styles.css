@@ -102,10 +102,10 @@ h2, h3, h4, h5, h6 {
   a {
     text-decoration-color: #bdbdbd;
     text-decoration-thickness: 2px;
-    color: #9bbbff;
+    color: #a6c2ff;
   }
   a:visited, a:active {
-    color: #5077cb;
+    color: #6394ff;
   }
   a:hover, .homelink:hover {
     color: #5d89e9;
