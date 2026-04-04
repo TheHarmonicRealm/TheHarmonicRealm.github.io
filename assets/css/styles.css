@@ -6,6 +6,7 @@ html {
   background-size: 150px;
   background-position: top center;
   background-repeat: repeat;
+  color: #000000;
 }
 
 body {
@@ -81,8 +82,38 @@ h2, h3, h4, h5, h6 {
     background-color: #f2f7f4;
   }
 }
+@media (prefers-color-scheme: dark) {
+  html {
+    background-color: #f2f7f4;
+  }
+}
 .libre-franklin {
   font-family: "Lucida Grande", "Lucida Sans Unicode", system-ui, "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    background-color: #1b2744;
+    color: #ffffff;
+  }
+  body {
+    background-color: #171717;
+  }
+  a {
+    text-decoration-color: #bdbdbd;
+    text-decoration-thickness: 2px;
+    color: #9bbbff;
+  }
+  a:visited, a:active {
+    color: #5077cb;
+  }
+  a:hover, .homelink:hover {
+    color: #5d89e9;
+  }
+  hr {
+    border: 0 none transparent; /*Get rid of shading with CSS*/
+    border-top: 3px solid rgba(255, 255, 255, 0.6666666667);
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
