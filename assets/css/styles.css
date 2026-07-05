@@ -20,7 +20,7 @@ body {
   min-height: 100%;
   box-sizing: border-box;
   background-color: #f2f7f4;
-  font-family: "Palatino", "Palatino Linotype", "Georgia", "URW Bookman", "DejaVu Serif", serif;
+  font-family: "Barlow", system-ui, "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 }
 
 p {
@@ -29,7 +29,13 @@ p {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Lucida Grande", "Lucida Sans Unicode", system-ui, "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-family: "Barlow", system-ui, "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  line-height: 0.8;
+}
+
+h1 {
+  font-weight: 800;
+  line-height: 0.5;
 }
 
 a {
@@ -87,10 +93,6 @@ h2, h3, h4, h5, h6 {
     background-color: #f2f7f4;
   }
 }
-.libre-franklin {
-  font-family: "Lucida Grande", "Lucida Sans Unicode", system-ui, "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-}
-
 @media (prefers-color-scheme: dark) {
   html {
     background-color: #1b2744;
