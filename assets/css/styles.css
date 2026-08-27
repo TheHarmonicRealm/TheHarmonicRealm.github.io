@@ -1,9 +1,7 @@
 html {
   height: 100%;
-  background-color: #dbe6ff;
+  background-color: #f2f7f4;
   scrollbar-gutter: stable both-edges;
-  background-image: url("/assets/images/background_pattern.svg");
-  background-size: 150px;
   background-position: top center;
   background-repeat: repeat;
   color: #000000;
@@ -86,12 +84,12 @@ h2, h3, h4, h5, h6 {
 }
 @media (prefers-color-scheme: dark) {
   html {
-    background-color: #f2f7f4;
+    background-color: #171717;
   }
 }
 @media (prefers-color-scheme: dark) {
   html {
-    background-color: #1b2744;
+    background-color: #171717;
     color: #ffffff;
   }
   body {

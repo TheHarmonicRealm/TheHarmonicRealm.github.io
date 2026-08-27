@@ -1,9 +1,0 @@
-<svg width="200" height="200" version="1.1" viewBox="0 0 52.917 52.917" xmlns="http://www.w3.org/2000/svg">
- <path d="m2.8065-2.8065-5.6131 5.6131 23.652 23.652-23.652 23.651 5.6131 5.6131 23.652-23.651 23.651 23.651 5.6131-5.6131-23.651-23.651 23.651-23.652-5.6131-5.6131-23.651 23.652-23.652-23.652z" fill="#4882ff" opacity=".11925" style="paint-order:fill markers stroke"/>
- <g fill="#4480ff">
-  <rect transform="rotate(45)" x="46.772" y="-28.063" width="18.709" height="18.709" opacity=".11925" style="paint-order:fill markers stroke"/>
-  <rect transform="rotate(45)" x="46.772" y="9.3544" width="18.709" height="18.709" opacity=".11925" style="paint-order:fill markers stroke"/>
-  <rect transform="rotate(45)" x="9.3544" y="-28.063" width="18.709" height="18.709" opacity=".11925" style="paint-order:fill markers stroke"/>
-  <rect transform="rotate(45)" x="9.3544" y="9.3544" width="18.709" height="18.709" opacity=".11925" style="paint-order:fill markers stroke"/>
- </g>
-</svg>
