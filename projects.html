@@ -1,0 +1,128 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name = "viewport" content = "width=device-width, initial-scale = 1">
+    <title>Projects • Noah Solomon</title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <h1 id="noah-solomon--projects"><a href="/">Noah Solomon</a> / projects</h1>
+<hr />
+
+<script src="/assets/js/tappable_videos.js" defer=""></script>
+
+<h2 id="projects">Projects</h2>
+
+<p>Here are three of my recent projects. Also remember to check out my
+<a href="/resume.pdf">my resume</a> and connect with me on <a href="https://www.linkedin.com/in/nobodybutnoah">LinkedIn</a>.</p>
+
+<h3 id="fpga-sim">fpga-sim<a id="fpga-sim"></a></h3>
+
+<p>Over my last winter break, I independently developed software to synthesize
+and run users’ Verilog code on-screen on “virtual boards.”</p>
+
+<p>This lets instructors enagingly teach synthesizable code without needing to buy
+boards for students.
+In addition to emulating the small devkits that would be used at a school, the
+program supports more complex boards, like a calculator and an LCD-style game
+board.</p>
+
+<p>Shown below are two of my boards running programs students could realistically
+write for course assignments
+(tap them to pause/play):</p>
+
+<table class="table-black halves">
+  <tbody>
+    <tr>
+      <td><video playsinline="" autoplay="true" class="looping-video" muted="true" loop="true"><source src="/assets/videos/calculator_light.mov" type="video/mp4" /></video></td>
+      <td><video playsinline="" autoplay="true" class="looping-video" muted="true" loop="true"><source src="/assets/videos/segment_light.mov" type="video/mp4" /></video></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>On course staff for ECE2029 (Introduction to Digital Circuit Design), I helped
+~120 students install and use the software for all of their lab assignments,.
+Multiple professors are interested in using the software again, and I am
+continuing its development in my free time. I have since updated it to let
+instructors easily make new boards for assignments.</p>
+
+<p><a href="/fpga-sim">Read more about my FPGA board simulator here</a>.</p>
+
+<h3 id="photon-emission-microscope-software">Photon emission microscope software<a id="photon-emission"></a></h3>
+
+<p>For my CS-ECE capstone project at WPI, I developed new software for the
+<a href="https://vernamlab.org/">Vernam Lab</a>’s ALPhANOV S-LMS microscope.
+My application streamlines the process of capturing photon emission
+images for hardware security analysis.</p>
+
+<p>Photon emission images map brightnesses to the <em>switching frequencies</em> of
+transistors, and can reveal the structures active in a digital circuit.
+For example, a running counter has a recognizable “ramping” PE gradient:
+from the least significant to the most, each bit will flip half
+as often as the last.</p>
+
+<p>I took over development from a previous team and produced a complete GUI to
+succeed their terminal-based app. My software lets users easily take photon
+emission photos, with in-UI subtractive denoising and contrast adjustment.
+It includes the core features of the manufacturer’s software while being
+more stable and intuitive to use.
+It adds image filters, a click-to-move feature, easy frame exporting, and more.</p>
+
+<!-- TODO: make this become two rows on small screens? -->
+
+<table class="halves">
+  <tbody>
+    <tr>
+      <td><img src="assets/images/microscope_app.webp" alt="My new software's interface" /></td>
+      <td><img src="assets/images/microscope_photo.webp" alt="The ALPhANOV photon emission microscope" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>During active development, I worked closely with another team to research the
+vulnerabilities of an FPGA-based LLM accelerator to photon emission inspection.
+We used the software to perform a proof-of-concept extraction attack, mapping
+weights to emission patterns. Our projects’ joint video won first place
+in the ECE department’s competition.</p>
+
+<h3 id="les-paul-sound-on-sound-exhibit">Les Paul “Sound on Sound” exhibit<a id="sound-on-sound"></a></h3>
+
+<p>For my humanities capstone project, I worked on a team to make a piece for the
+Waukesha County Historical Society &amp; Museum, which has a large Les Paul
+collection.</p>
+
+<p>Les Paul pioneered overdubbing, which he called “sound on sound.” An early
+technique he developed was to record onto one lacquer disc, then play it back
+and mix it with live audio onto a second disc. We designed a working facsimile
+of a phonograph and a lathe for live demos of this method.</p>
+
+<div class="one-item"><img src="assets/images/sound_on_sound.webp" alt="The Les Paul sound on sound device" /></div>
+
+<p>One of my contributions to the project was the idea to include
+multiple fake record discs, each with a sticker of a different color. The
+demonstrator will move discs back and forth, providing a clear visual
+for spectators, while they actually control it via disc selector dials and
+on/off switches on the back. Motors on the turntable and lathe rotate the discs
+when they are active, and LEDs under each component light up with the color of
+the currently selected discs to further reinforce the visual.</p>
+
+<p>I also wrote the code for the project, running on a Daisy Seed. The components
+we needed took a long time to arrive, so I did not have time during the term to
+complete the implementation of the LEDs/motors and input from the external
+controls, but it will be a quick job for a future group to finish the device.
+I produced a full prototype of the core overdubbing behavior, testing it using a
+Daisy Pod’s built-in controls.</p>
+
+    <hr class="light-hr">
+
+<div class="footer">
+<strong>Last updated: September 2026.</strong>
+
+</div>
+
+  </body>
+</html>

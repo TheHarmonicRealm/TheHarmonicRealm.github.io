@@ -1,0 +1,250 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name = "viewport" content = "width=device-width, initial-scale = 1">
+    <title>fpga-sim • Noah Solomon</title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <h1 id="noah-solomon--fpga-sim"><a href="/">Noah Solomon</a> / fpga-sim</h1>
+<hr />
+
+<script src="/assets/js/video_button.js" defer=""></script>
+
+<h2 id="fpga-board-simulator">FPGA board simulator</h2>
+
+<p>This page covers <em>fpga-sim</em>, the app I developed for WPI’s digital circuits
+course to let students run synthesizable Verilog code on-screen on almost any
+computer.
+It is <a href="https://github.com/TheHarmonicRealm/fpga-sim">available on GitHub</a>
+for download.</p>
+
+<h3 id="background">Background</h3>
+
+<p>As a sophomore at WPI, I took the course
+Introduction to Digital Circuit Design (ECE2029) and enjoyed it a lot. A big
+part of it was using Verilog to program FPGA devkits; being able to
+write code which turned into an accurate circuit was amazing to me.</p>
+
+<p>The next year, I was a TA for the course. That year, they did not use FPGAs
+anymore for cost reasons, only teaching Verilog via testbench simulations.
+I thought that removing the experience of writing code that you would physically
+interact with via the board was a big downgrade. Also, the students still had to
+run their testbenches with Vivado; of course, Vivado had been necessary when
+FPGAs were used, but the new version of the class only used a tiny part of it.
+The large download size and lack of Mac support, among other issues, added
+unnecessary friction to the class.</p>
+
+<p>In winter break of my senior year, I developed an app in the hopes of improving
+the course, which I then deployed as a TA. My software emulates the experience
+of the FPGA devkits, running synthesizable code on a “virtual board.”
+Using Verilator in a container, users’
+code is turned into a fast C++ model, linked with a driver program into an
+executable, and run at a fixed speed, receiving input states from a GUI window
+and sending its output state back to be rendered. It also uses Verilator to run
+testbenches much more quickly than Vivado does.</p>
+
+<p>The app is cross-platform, with full support for Mac, Windows, and Linux, and
+has low performance requirements.
+It uses PySide6 (Qt) for the boards, so the GUI is highly consistent across
+operating systems. VSCode is recommended as the associated IDE to write
+your source code in, and it supports automatically opening testbench waveforms
+with VaporView (a VSCode extension), GTKWave, or Surfer.</p>
+
+<p>On course staff, I overhauled most of the class’s
+lab assignments to integrate the simulator and held extensive office hours.
+The software was installed by at least 50 lab pairs/groups from our class of
+<strong>about 120 students</strong>.</p>
+
+<h3 id="virtual-boards">Virtual boards</h3>
+
+<p>The FPGA simulation feature supports multiple “virtual boards” with different
+layouts and I/O. At the time of the course, the software supported one virtual
+board, directly based on the devkit formerly used for the class.</p>
+
+<p><input id="play-checkbox" type="checkbox" checked="true" aria-label="Play/pause all videos on the page" /><label for="play-checkbox"><strong>Autoplay demo videos</strong> (you can click individual videos to pause/unpause)</label></p>
+
+<h4 id="classic-board">Classic board</h4>
+<p>An example of a program running on my first board, which is based on the old
+class’s devkits, is shown below. At the time of the course, this was the only
+supported board, so I later named it “classic.”</p>
+
+<p>The Verilog program shown running is a calculator
+design similar to one students made in one of the labs I developed
+for the course. The app selects light or dark mode based on system settings.</p>
+
+<table class="table-black">
+  <tbody>
+    <tr>
+      <td><video playsinline="" class="looping-video" autoplay="true" muted="true" loop="true"><source src="/assets/videos/segment_light.mov" type="video/mp4" /></video></td>
+      <td><video playsinline="" class="looping-video" autoplay="true" muted="true" loop="true"><source src="/assets/videos/segment_dark.mov" type="video/mp4" /></video></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Notice the fade effect when the numbers are changing. This is because the
+segmented display’s inputs are a number pattern and a digit select code, so it
+must constantly cycle to show more than one thing at a time. See below a
+slowed-down rendition of how numbers are shown:</p>
+
+<div class="one-item"><video playsinline="" style="width: 200px" class="looping-video" autoplay="true" muted="true" loop="true"><source src="/assets/videos/slow_segment_demo.mov#t=0.1" type="video/mp4" /></video></div>
+
+<p>With the real-world display, the clock speed is on the order of megahertz.
+Because the digits switch extremely fast and take a moment to fade off, this
+looks like a persistent and bright “0312” to the human eye.
+The software’s clock is much slower (60 Hz), so I apply a greatly exaggerated
+fade effect whenever a segment switches off to eliminate flickering.</p>
+
+<h4 id="additional-boards">Additional boards</h4>
+
+<p>After the term, I continued working on the project and released a second
+edition of the software. This update removed the hard-coding of the single
+devkit from the server code, now using some light code generation to create a
+C++ driver compatible with any model the user’s code produces; therefore, to add
+a new board, a user just needs to write a small new Python program to run on the
+client side and add a line to a toml config file.</p>
+
+<p>Using this new system, I made multiple new boards and included them with the
+program. Shown below are two of them:</p>
+<ul>
+  <li>A four-function calculator with a four-digit dot-matrix display. This takes
+a display programmed similarly to the seven-segment and creates a specific
+“device” to use it.</li>
+  <li>A board for a game inspired by old LCD handhelds. In this game, the user moves
+a bucket to catch apples. This uses a new widget I made to hide and show
+elements of an SVG.</li>
+</ul>
+
+<table class="table-black">
+  <tbody>
+    <tr>
+      <td><video playsinline="" class="looping-video" autoplay="true" muted="true" loop="true"><source src="/assets/videos/calculator_light.mov" type="video/mp4" /></video></td>
+      <td><video playsinline="" class="looping-video" autoplay="true" muted="true" loop="true"><source src="/assets/videos/apple_light.mov" type="video/mp4" /></video></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The components of my “official” boards are all designed to be reused in new code
+and my hope is that an ambitious instructor using the program will make more of
+them to provide interesting bespoke labs for students. The app supports adding
+new boards in a separate file from the main board configuration, to make it
+harder for students to accidentally break the program when adding their
+teachers’ extensions.</p>
+
+<p>Defining a new board using existing components would be fairly easy for someone
+with moderate programming skills. The included boards all subclass
+<code class="language-plaintext highlighter-rouge">board__base.py</code>, which does basically all of the repetitive setup, and each
+only takes about <strong>70 to 150 lines of simple Python code</strong>. The widgets I’ve
+made so far, which can be imported and reused for new boards, include:</p>
+<ul>
+  <li>Sticky and non-sticky buttons</li>
+  <li>Switches (dressed-up checkboxes)</li>
+  <li>Seven-segment display groups with any number of digits</li>
+  <li>Dot-matrix display groups with any number of digits, any vertical or
+horizontal resolution, and any size or spacing of the
+inner “pixels” and groups of pixels</li>
+  <li>The SVG renderer used for the apple game board</li>
+</ul>
+
+<h3 id="supporting-novice-users">Supporting novice users</h3>
+
+<p>One aspect of the course I kept in mind while developing the app is that ECE2029
+is mostly taken by first-year ECE students, and has no programming
+prerequisites. Therefore,
+<a href="https://github.com/TheHarmonicRealm/fpga-sim#readme">the app’s instructions</a>
+walk users through the process quite thoroughly. For example they explain how to
+check your computer’s CPU architecture, which is needed for many of the required
+downloads. It is also very specific about the steps taken in the
+terminal.</p>
+
+<p>In this vein, the program itself has some helpful
+features such as checking that the user-provided code’s ports match the
+required ones and printing helpful errors. For the classic board specifically,
+I implemented a list of aliases matching my names to the original devkit’s
+constraint file:</p>
+
+<pre class="code-block"><code>    * Missing input "<b>RB:1</b>".
+    <b class="code-green">Suggestion:</b> rename "<b>btnR</b>" to "<b>RB</b>"
+    * Missing input "<b>CB:1</b>".
+    <b class="code-green">Suggestion:</b> rename "<b>btnC</b>" to "<b>CB</b>"
+    * Missing output "<b>segment:7</b>".
+    <b class="code-green">Suggestion:</b> rename "<b>seg</b>" to "<b>segment</b>"
+    * Missing output "<b>anode:4</b>".
+    <b class="code-green">Suggestion:</b> rename "<b>an</b>" to "<b>anode</b>"
+</code></pre>
+
+<p>Another piece I worked on to help students narrow down issues is processing of
+Verilator’s error messages. When my program receives raw error printout, it
+trims it down, removing some info irrelevant to a regular user such as Makefile
+line numbers and deleting suggestions to use <code class="language-plaintext highlighter-rouge">always_latch</code> (bad advice
+for students in almost any scenario). It also converts the filepaths to be
+clickable on the user’s terminals and adds some color to the output.</p>
+
+<p>Raw error output:</p>
+
+<pre class="code-block"><code>%Warning-LATCH: user_inputs/top.v:168:1: Latch inferred for signal 'top.current_num' (not all control paths of combinational always assign a value)
+                                       : ... Suggest use of always_latch for intentional latches
+  168 | always_comb begin
+      | ^~~~~~~~~~~
+                ... For warning description see https://verilator.org/warn/LATCH?v=5.046
+                ... Use "/* verilator lint_off LATCH */" and lint_on around source to disable this message.
+%Error: Exiting due to 1 warning(s)
+make: *** [Makefile:75: generate_code] Error 1
+</code></pre>
+
+<p>Complete user-facing printout:</p>
+<pre class="code-block"><code><span class="code-red"><b>Warning-LATCH:</b> verilog/live_sim/realadd/top.v:168:1: Latch inferred for signal 'top.current_num' (not all control paths of combinational always assign a value)</span>
+
+<span class="code-gold">168 |</span> always_comb begin
+    <span class="code-gold">|</span> <b class="code-red">^~~~~~~~~~~</b>
+</code></pre>
+
+<p>Elaboration of designs is also prevented if there is a linting error. This
+avoids situations such as Verilator raising a NULLPORT error on a module with a
+trailing comma during linting, but then raising a totally contradictory
+PINMISSING error in the following “doomed” build.</p>
+
+<p>Another feature of the CLI is contextual tab completion, available on all
+platforms thanks to
+<a href="https://github.com/prompt-toolkit/python-prompt-toolkit">Python Prompt Toolkit</a>
+(initially, it used READLINE so it was Unix-only). A few examples:</p>
+
+<!-- todo: represent results as table for accessibility? -->
+<p><em>Nothing typed:</em> all commands.</p>
+<pre class="code-block"><code>&gt;<b>
+waveform_sim      build_live_sim    start_live_sim
+help              exit</b>
+</code></pre>
+
+<p><em>Entered <code class="language-plaintext highlighter-rouge">build_live_sim</code> or <code class="language-plaintext highlighter-rouge">waveform_sim</code></em>:
+all folders within <code class="language-plaintext highlighter-rouge">live_sim/</code> or <code class="language-plaintext highlighter-rouge">testbench/</code>.</p>
+<pre class="code-block"><code>&gt; build_live_sim<b>
+apple             lab_1             lab_1_real_final
+addseg            addot             ex_live</b>
+</code></pre>
+
+<pre class="code-block"><code>&gt; waveform_sim<b>
+apple_tb          door_sensor       prelab_5
+ex_tb             lab_5_sequence    lab_4_incrementer</b>
+</code></pre>
+
+<p><em>Entered <code class="language-plaintext highlighter-rouge">build_live_sim</code> and one argument</em>:
+all the currently available simulators.</p>
+<pre class="code-block"><code>&gt; build_live_sim apple<b>
+classic           dotmatrix         calculator
+switches          apple_game        alarm</b>
+</code></pre>
+
+    <hr class="light-hr">
+
+<div class="footer">
+<strong>Last updated: September 2026.</strong>
+
+</div>
+
+  </body>
+</html>

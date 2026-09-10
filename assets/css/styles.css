@@ -1,10 +1,14 @@
 html {
   height: 100%;
-  background-color: #f2f7f4;
+  background-color: white;
   scrollbar-gutter: stable both-edges;
   background-position: top center;
   background-repeat: repeat;
-  color: #000000;
+  color: #171717;
+}
+
+video {
+  max-width: 100%;
 }
 
 body {
@@ -17,12 +21,11 @@ body {
   padding-right: 50px;
   min-height: 100%;
   box-sizing: border-box;
-  background-color: #f2f7f4;
-  font-family: -apple-system, "Inter", "Helvetica Neue", "Helvetica", "Arial", system-ui, sans-serif;
+  background-color: white;
+  font-family: -apple-system, "Inter", "Helvetica Neue", "Arial", system-ui, sans-serif;
 }
 
 p {
-  font-size: 1em;
   margin-top: 0px;
 }
 
@@ -41,7 +44,7 @@ a:hover, .homelink:hover {
 }
 
 .footer {
-  font-size: .9em;
+  font-size: 0.9em;
   font-style: italic;
 }
 
@@ -56,19 +59,17 @@ hr {
 }
 
 h1 {
-  margin-top: 15px;
-  margin-bottom: 20px;
+  margin-top: 5px;
+  margin-bottom: 0px;
   font-weight: 800;
-  line-height: 0.5;
 }
 
 h2, h3, h4, h5, h6 {
-  margin-top: 15px;
-  margin-bottom: 5px;
+  margin-top: 10px;
+  margin-bottom: 0px;
   font-weight: 500;
   text-transform: uppercase;
-  font-family: "Jost", "Futura", -apple-system, "Inter", "Helvetica Neue", "Helvetica", "Arial", system-ui, sans-serif;
-  line-height: 0.8;
+  font-family: "Jost", "Futura", -apple-system, "Inter", "Helvetica Neue", "Arial", system-ui, sans-serif;
 }
 
 @media screen and (width <= 900px) {
@@ -79,7 +80,7 @@ h2, h3, h4, h5, h6 {
 }
 @media screen and (width <= 930px) {
   html {
-    background-color: #f2f7f4;
+    background-color: white;
   }
 }
 @media (prefers-color-scheme: dark) {
@@ -87,6 +88,36 @@ h2, h3, h4, h5, h6 {
     background-color: #171717;
   }
 }
+.code-light-blue {
+  color: #00638a;
+}
+
+.code-orange {
+  color: #aa4900;
+}
+
+.code-green {
+  color: #008001;
+}
+
+.code-red {
+  color: #dd0000;
+}
+
+.code-gold {
+  color: #807e00;
+}
+
+pre.code-block {
+  white-space: pre-wrap;
+  background-color: #ddd;
+  padding: 10px;
+}
+
+td.code-block {
+  background-color: #ddd;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     background-color: #171717;
@@ -110,6 +141,63 @@ h2, h3, h4, h5, h6 {
     border: 0 none transparent; /*Get rid of shading with CSS*/
     border-top: 3px solid rgba(255, 255, 255, 0.6666666667);
   }
+  .code-light-blue {
+    color: #009edd;
+  }
+  .code-orange {
+    color: #dd8c00;
+  }
+  .code-green {
+    color: #00bd00;
+  }
+  .code-red {
+    color: #ff0000;
+  }
+  .code-gold {
+    color: #bcb900;
+  }
+  pre.code-block {
+    white-space: pre-wrap;
+    background-color: #222;
+  }
+  td.code-block {
+    background-color: #222;
+  }
+}
+table {
+  margin: 0px auto;
+  overflow: hidden;
+  padding: 0;
+  margin-bottom: 10px;
+}
+
+table.table-black td {
+  background-color: black;
+}
+
+table.halves td {
+  width: 50%;
+}
+
+table.thirds td {
+  width: 33.33333%;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+img {
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.one-item {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: 0px auto;
+  margin-bottom: 10px;
 }
 
 /*# sourceMappingURL=styles.css.map */
