@@ -1,10 +1,9 @@
+@import url(/assets/css/colors.css);
 html {
   height: 100%;
-  background-color: white;
   scrollbar-gutter: stable both-edges;
-  background-position: top center;
-  background-repeat: repeat;
-  color: #171717;
+  background-color: var(--main-background-color);
+  color: var(--text-color);
 }
 
 video {
@@ -12,8 +11,11 @@ video {
 }
 
 body {
-  margin: auto;
-  padding-top: 10px;
+  padding: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  padding-top: 0;
   padding-bottom: 10px;
   margin-bottom: 0px;
   max-width: 900px;
@@ -21,7 +23,7 @@ body {
   padding-right: 50px;
   min-height: 100%;
   box-sizing: border-box;
-  background-color: white;
+  background-color: var(--main-background-color);
   font-family: -apple-system, "Inter", "Helvetica Neue", "Arial", system-ui, sans-serif;
 }
 
@@ -30,17 +32,17 @@ p {
 }
 
 a {
-  text-decoration-color: #bdbdbd;
   text-decoration-thickness: 2px;
-  color: #1d57d5;
+  text-decoration-color: var(--link-underline-color);
+  color: var(--link-color);
 }
 
 a:visited, a:active {
-  color: #042e88;
+  color: var(--link-visited-color);
 }
 
 a:hover, .homelink:hover {
-  color: #5d89e9;
+  color: var(--link-hover-color);
 }
 
 .footer {
@@ -50,7 +52,7 @@ a:hover, .homelink:hover {
 
 hr {
   border: 0 none transparent; /*Get rid of shading with CSS*/
-  border-top: 3px solid rgba(0, 0, 0, 0.3333333333);
+  border-top: 3px solid var(--hr_color);
 }
 
 .light-hr {
@@ -65,7 +67,7 @@ h1 {
 }
 
 h2, h3, h4, h5, h6 {
-  margin-top: 10px;
+  margin-top: 0px;
   margin-bottom: 0px;
   font-weight: 500;
   text-transform: uppercase;
@@ -78,92 +80,63 @@ h2, h3, h4, h5, h6 {
     padding-right: 10px;
   }
 }
-@media screen and (width <= 930px) {
-  html {
-    background-color: white;
-  }
-}
-@media (prefers-color-scheme: dark) {
-  html {
-    background-color: #171717;
-  }
-}
 .code-light-blue {
-  color: #00638a;
+  color: var(--code_light_blue);
 }
 
 .code-orange {
-  color: #aa4900;
+  color: var(--code_orange);
 }
 
 .code-green {
-  color: #008001;
+  color: var(--code_green);
 }
 
 .code-red {
-  color: #dd0000;
+  color: var(--code_red);
 }
 
 .code-gold {
-  color: #807e00;
+  color: var(--code_gold);
 }
 
 pre.code-block {
   white-space: pre-wrap;
-  background-color: #ddd;
+  background-color: var(--code_bg);
   padding: 10px;
 }
 
 td.code-block {
-  background-color: #ddd;
+  background-color: var(--code_bg);
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    background-color: #171717;
-    color: #ffffff;
-  }
-  body {
-    background-color: #171717;
-  }
-  a {
-    text-decoration-color: #bdbdbd;
-    text-decoration-thickness: 2px;
-    color: #a6c2ff;
-  }
-  a:visited, a:active {
-    color: #6394ff;
-  }
-  a:hover, .homelink:hover {
-    color: #5d89e9;
-  }
-  hr {
-    border: 0 none transparent; /*Get rid of shading with CSS*/
-    border-top: 3px solid rgba(255, 255, 255, 0.6666666667);
-  }
-  .code-light-blue {
-    color: #009edd;
-  }
-  .code-orange {
-    color: #dd8c00;
-  }
-  .code-green {
-    color: #00bd00;
-  }
-  .code-red {
-    color: #ff0000;
-  }
-  .code-gold {
-    color: #bcb900;
-  }
-  pre.code-block {
-    white-space: pre-wrap;
-    background-color: #222;
-  }
-  td.code-block {
-    background-color: #222;
-  }
+.top-name {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding-bottom: 0px;
+  font-weight: 800;
+  font-size: 1.5em;
 }
+
+#navbar {
+  background-color: var(--main-background-color);
+  width: 100%;
+  border-bottom: 2px solid var(--text-color);
+}
+
+#navbar-spacer, #navbar {
+  width: 100%;
+  padding-top: 0px;
+  margin-top: 0px;
+  padding-bottom: 0px;
+  max-width: inherit;
+  margin-bottom: 10px;
+}
+
+#navbar-spacer {
+  height: 0px;
+}
+
 table {
   margin: 0px auto;
   overflow: hidden;
@@ -198,6 +171,20 @@ img {
   justify-content: center;
   margin: 0px auto;
   margin-bottom: 10px;
+}
+
+.active-page {
+  font-weight: 600;
+  font-style: italic;
+}
+
+:target {
+  scroll-margin-top: var(--navbar-height);
+}
+@supports (hanging-punctuation: first) {
+  :target {
+    scroll-margin-top: calc(var(--navbar-height) + 30px);
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
