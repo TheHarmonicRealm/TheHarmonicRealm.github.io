@@ -28,6 +28,21 @@ computer.
 It is <a href="https://github.com/TheHarmonicRealm/fpga-sim">available on GitHub</a>
 for download.</p>
 
+<p><input id="play-checkbox" type="checkbox" checked="true" aria-label="Play/pause all videos on the page" /><label for="play-checkbox"><strong>Autoplay demo videos</strong> (you can click individual videos to pause/unpause)</label></p>
+
+<p>It includes multiple “virtual devkits,” with three shown below running Verilog
+programs:</p>
+
+<table class="table-black thirds">
+  <tbody>
+    <tr>
+      <td><video playsinline="" autoplay="true" class="looping-video" muted="true" loop="true"><source src="/assets/videos/calculator_light.mov" type="video/mp4" /></video></td>
+      <td><video playsinline="" autoplay="true" class="looping-video" muted="true" loop="true"><source src="/assets/videos/dotmatrix_dark.mov" type="video/mp4" /></video></td>
+      <td><video playsinline="" autoplay="true" class="looping-video" muted="true" loop="true"><source src="/assets/videos/apple_light.mov" type="video/mp4" /></video></td>
+    </tr>
+  </tbody>
+</table>
+
 <h3 id="background">Background</h3>
 
 <p>As a sophomore at WPI, I took the course
@@ -71,8 +86,6 @@ The software was installed by at least 50 lab pairs/groups from our class of
 layouts and I/O. At the time of the course, the software supported one virtual
 board, directly based on the devkit formerly used for the class.</p>
 
-<p><input id="play-checkbox" type="checkbox" checked="true" aria-label="Play/pause all videos on the page" /><label for="play-checkbox"><strong>Autoplay demo videos</strong> (you can click individual videos to pause/unpause)</label></p>
-
 <h4 id="classic-board">Classic board</h4>
 <p>An example of a program running on my first board, which is based on the old
 class’s devkits, is shown below. At the time of the course, this was the only
@@ -114,24 +127,15 @@ a new board, a user just needs to write a small new Python program to run on the
 client side and add a line to a toml config file.</p>
 
 <p>Using this new system, I made multiple new boards and included them with the
-program. Shown below are two of them:</p>
+program. Three are shown at the top of this page:</p>
 <ul>
-  <li>A four-function calculator with a four-digit dot-matrix display. This takes
-a display programmed similarly to the seven-segment and creates a specific
-“device” to use it.</li>
+  <li>A four-function calculator with a four-digit 3x5 dot-matrix display.</li>
+  <li>A variant of the original board, replacing the seven-segment display with
+four 3x7 dot-matrix digits.</li>
   <li>A board for a game inspired by old LCD handhelds. In this game, the user moves
 a bucket to catch apples. This uses a new widget I made to hide and show
 elements of an SVG.</li>
 </ul>
-
-<table class="table-black">
-  <tbody>
-    <tr>
-      <td><video playsinline="" class="looping-video" autoplay="true" muted="true" loop="true"><source src="/assets/videos/calculator_light.mov" type="video/mp4" /></video></td>
-      <td><video playsinline="" class="looping-video" autoplay="true" muted="true" loop="true"><source src="/assets/videos/apple_light.mov" type="video/mp4" /></video></td>
-    </tr>
-  </tbody>
-</table>
 
 <p>The components of my “official” boards are all designed to be reused in new code
 and my hope is that an ambitious instructor using the program will make more of
@@ -216,7 +220,9 @@ PINMISSING error in the following “doomed” build.</p>
 <p>Another feature of the CLI is contextual tab completion, available on all
 platforms thanks to
 <a href="https://github.com/prompt-toolkit/python-prompt-toolkit">Python Prompt Toolkit</a>
-(initially, it used READLINE so it was Unix-only). A few examples:</p>
+(initially, I used readline/editline, so this feature was Unix-only and more
+difficult to program).
+A few examples:</p>
 
 <!-- todo: represent results as table for accessibility? -->
 <p><em>Nothing typed:</em> all commands.</p>
